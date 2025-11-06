@@ -1,0 +1,565 @@
+.features{
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding-bottom: 84vh;
+    background-color: black;
+}
+.features-container{
+    height: 900vh;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    top: 0;
+}
+.left-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+}
+.left-title-card{
+    font-size: 25px;
+    margin-bottom: 90vh;
+    padding: 20px;
+    position: sticky;
+    top: 10vh;
+}
+.left-card1{
+    font-size: 25px;
+    margin-bottom: 80vh;
+    padding: 20px;
+    position: sticky;
+    top: 20vh;
+}
+.left-card2{
+    font-size: 25px;
+    margin-bottom: 75vh;
+    padding: 20px;
+    position: sticky;
+    top: 26vh;
+}
+.left-card3{
+    font-size: 25px;
+    margin-bottom: 70vh;
+    padding: 20px;
+    position: sticky;
+    top: 32vh;
+}
+.left-card4{
+    font-size: 25px;
+    margin-bottom: 65vh;
+    padding: 20px;
+    position: sticky;
+    top: 37vh;
+}
+.left-card5{
+    font-size: 25px;
+    margin-bottom: 50vh;
+    padding: 20px;
+    position: sticky;
+    top: 42vh;
+}
+.left-card6{
+    font-size: 25px;
+    margin-bottom: 45vh;
+    padding: 20px;
+    position: sticky;
+    top: 58vh;
+}
+.left-card7{
+    font-size: 25px;
+    margin-bottom: 35vh;
+    padding: 20px;
+    position: sticky;
+    top: 65vh;
+}
+.left-card8{
+    font-size: 25px;
+    margin-bottom: 6vh;
+    padding: 20px;
+    position: sticky;
+    top: 90vh;
+}
+
+
+
+
+.right-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    padding-top: 500vh;
+}
+.right-title-card{
+    font-size: 25px;
+    margin-bottom: 80vh;
+    padding: 20px;
+    position: sticky;
+    top: 10vh;
+}
+.right-card1{
+    font-size: 25px;
+    margin-bottom: 75vh;
+    padding: 20px;
+    position: sticky;
+    top: 20vh;
+}
+.right-card2{
+    font-size: 25px;
+    margin-bottom: 65vh;
+    padding: 20px;
+    position: sticky;
+    top: 45vh;
+}
+.right-card3{
+    font-size: 25px;
+    margin-bottom: 50vh;
+    padding: 20px;
+    position: sticky;
+    top: 70vh;
+}
+.image-button-right-card4{
+    margin-bottom: 5vh;
+    position: sticky;
+    background-color: red;
+    color: black;
+    top: 87vh;
+    width: 50%;
+    border-radius: 40px;
+}
+
+
+
+
+@media screen and (max-width: 1200px) {
+
+.features{
+    width: 100%;
+    height: 110vh;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: sticky;
+    top: 0;
+    padding-bottom: 84vh;
+    background-color: black;
+}
+.features-container{
+    height: 1200vh;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    top: 0;
+}
+.left-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+}
+.left-title-card{
+    font-size: 25px;
+    margin-bottom: 170vh;
+    padding: 20px;
+    position: sticky;
+    top: 10vh;
+}
+.left-card1{
+    font-size: 20px;
+    margin-bottom: 160vh;
+    padding: 20px;
+    position: sticky;
+    top: 20vh;
+}
+.left-card2{
+    font-size: 20px;
+    margin-bottom: 150vh;
+    padding: 20px;
+    position: sticky;
+    top: 25vh;
+}
+.left-card3{
+    font-size: 20px;
+    margin-bottom: 140vh;
+    padding: 20px;
+    position: sticky;
+    top: 30vh;
+}
+.left-card4{
+    font-size: 20px;
+    margin-bottom: 125vh;
+    padding: 20px;
+    position: sticky;
+    top: 35vh;
+}
+.left-card5{
+    font-size: 20px;
+    margin-bottom: 100vh;
+    padding: 20px;
+    position: sticky;
+    top: 43vh;
+}
+.left-card6{
+    font-size: 20px;
+    margin-bottom: 80vh;
+    padding: 20px;
+    position: sticky;
+    top: 55vh;
+}
+.left-card7{
+    font-size: 20px;
+    margin-bottom: 55vh;
+    padding: 20px;
+    position: sticky;
+    top: 60vh;
+}
+.left-card8{
+    font-size: 20px;
+    margin-bottom: 6vh;
+    padding: 20px;
+    position: sticky;
+    top: 90vh;
+}
+.right-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+}
+.right-title-card{
+    font-size: 25px;
+    margin-bottom: 110vh;
+    padding: 20px;
+    position: sticky;
+    top: 10vh;
+}
+.right-card1{
+    font-size: 20px;
+    margin-bottom: 95vh;
+    padding: 20px;
+    position: sticky;
+    top: 20vh;
+}
+.right-card2{
+    font-size: 20px;
+    margin-bottom: 68vh;
+    padding: 20px;
+    position: sticky;
+    top: 30vh;
+}
+.right-card3{
+    font-size: 20px;
+    margin-bottom: 40vh;
+    padding: 20px;
+    position: sticky;
+    top: 45vh;
+}
+.image-button-right-card4{
+    margin-bottom: 1vh;
+    position: sticky;
+    background-color: red;
+    color: black;
+    top: 80vh;
+    width: 50%;
+    border-radius: 40px;
+}
+}
+
+
+
+@media (max-width: 415px) {
+.features{
+    width: 100%;
+    color: red;
+    display: flex;
+    position: sticky;
+    top: 0;
+    padding-bottom: 1vh;
+    background-color: black;
+}
+.features-container{
+    height: 350vh;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    position: sticky;
+    text-align: center;
+}
+.left-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.left-title-card{
+    font-size: 25px;
+    margin-bottom: 5vh;
+    padding: 20px;
+    position: relative;
+    top: 10vh;
+    color: red;
+}
+.left-card1{
+    font-size: 20px;
+    margin-bottom: 5vh;
+    padding: 20px;
+    position: relative;
+    top: 10vh;
+}
+.left-card2{
+    font-size: 20px;
+    margin-bottom: 5vh;
+    padding: 20px;
+    position: relative;
+    top: 10vh;
+}
+.left-card3{
+    font-size: 20px;
+    margin-bottom: 5vh;
+    padding: 20px;
+    position: relative;
+    top: 10vh;
+}
+.left-card4{
+    font-size: 20px;
+    margin-bottom: 5vh;
+    padding: 20px;
+    position: relative;
+    top: 10vh;
+}
+.left-card5{
+    font-size: 20px;
+    margin-bottom: 5vh;
+    padding: 20px;
+    position: relative;
+    top: 10vh;
+}
+.left-card6{
+    font-size: 20px;
+    margin-bottom: 5vh;
+    padding: 20px;
+    position: relative;
+    top: 10vh;
+}
+.left-card7{
+    font-size: 20px;
+    margin-bottom: 5vh;
+    padding: 20px;
+    position: relative;
+    top: 10vh;
+}
+.left-card8{
+    font-size: 20px;
+    margin-bottom: 5vh;
+    padding: 20px;
+    position: relative;
+    top: 10vh;
+}
+.right-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 10vh;
+    padding-top: 0vh;
+    margin-top: 0vh;
+}
+.right-title-card{
+    font-size: 25px;
+    margin-bottom: 5vh;
+    padding: 20px;
+    position: relative;
+    top: 10vh;
+    color: red;
+}
+.right-card1{
+    font-size: 20px;
+    margin-bottom: 5vh;
+    padding: 20px;
+    position: relative;
+    top: 10vh;
+}
+.right-card2{
+    font-size: 20px;
+    margin-bottom: 5vh;
+    padding: 20px;
+    position: relative;
+    top: 10vh;
+}
+.right-card3{
+    font-size: 20px;
+    margin-bottom: 5vh;
+    padding: 20px;
+    position: relative;
+    top: 10vh;
+}
+.image-button-right-card4{
+    margin-bottom: 5vh;
+    padding: 1px;
+    position: relative;
+    background-color: red;
+    color: black;
+    top: 20vh;
+    width: 100%;
+    border-radius: 40px;
+}
+}
+
+
+
+@media (max-width: 376px) {
+.features{
+    color: red;
+    display: flex;
+    position: sticky;
+    top: 0;
+    padding-bottom: 1vh;
+    background-color: black;
+}
+.features-container{
+    height: 350vh;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    position: sticky;
+    text-align: center;
+}
+.left-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.left-title-card{
+    font-size: 25px;
+    margin-bottom: 5vh;
+    padding: 20px;
+    position: relative;
+    top: 10vh;
+    color: red;
+}
+.left-card1{
+    font-size: 20px;
+    margin-bottom: 5vh;
+    padding: 20px;
+    position: relative;
+    top: 10vh;
+}
+.left-card2{
+    font-size: 20px;
+    margin-bottom: 5vh;
+    padding: 20px;
+    position: relative;
+    top: 10vh;
+}
+.left-card3{
+    font-size: 20px;
+    margin-bottom: 5vh;
+    padding: 20px;
+    position: relative;
+    top: 10vh;
+}
+.left-card4{
+    font-size: 20px;
+    margin-bottom: 5vh;
+    padding: 20px;
+    position: relative;
+    top: 10vh;
+}
+.left-card5{
+    font-size: 20px;
+    margin-bottom: 5vh;
+    padding: 20px;
+    position: relative;
+    top: 10vh;
+}
+.left-card6{
+    font-size: 20px;
+    margin-bottom: 5vh;
+    padding: 20px;
+    position: relative;
+    top: 10vh;
+}
+.left-card7{
+    font-size: 20px;
+    margin-bottom: 5vh;
+    padding: 20px;
+    position: relative;
+    top: 10vh;
+}
+.left-card8{
+    font-size: 20px;
+    margin-bottom: 5vh;
+    padding: 20px;
+    position: relative;
+    top: 10vh;
+}
+.right-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 10vh;
+    padding-top: 0vh;
+    margin-top: 0vh;
+}
+.right-title-card{
+    font-size: 25px;
+    margin-bottom: 5vh;
+    padding: 20px;
+    position: relative;
+    top: 10vh;
+    color: red;
+}
+.right-card1{
+    font-size: 20px;
+    margin-bottom: 5vh;
+    padding: 20px;
+    position: relative;
+    top: 10vh;
+}
+.right-card2{
+    font-size: 20px;
+    margin-bottom: 5vh;
+    padding: 20px;
+    position: relative;
+    top: 10vh;
+}
+.right-card3{
+    font-size: 20px;
+    margin-bottom: 5vh;
+    padding: 20px;
+    position: relative;
+    top: 10vh;
+}
+.image-button-right-card4{
+    margin-bottom: 5vh;
+    padding: 1px;
+    position: relative;
+    background-color: red;
+    color: black;
+    top: 20vh;
+    width: 100%;
+    border-radius: 40px;
+}
+}

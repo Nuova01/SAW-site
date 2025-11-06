@@ -1,0 +1,514 @@
+.wrapper-video{
+    position: sticky;
+    object-fit: cover;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+}
+.card-container-grid{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    z-index: 100;
+}
+.title-container{
+    width: 50vw;
+    color: red;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    position: sticky;
+}
+.title-1{
+    width: 50%;
+    height: 40vh;
+    position: sticky;
+    top: 30vh;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+.title-2{
+    font-size: 50px;
+    width: 50%;
+    height: 40vh;
+    position: sticky;
+    top: 28vh;
+}
+.title-3{
+    width: 100%;
+    height: 25vh;
+    position: sticky;
+    top: 70vh;
+    text-align: right;
+    margin-top: 20vh;
+    margin-bottom: 15.7vh;
+}
+.image-container{
+    height: max-content;
+    width: 50%;
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    margin-top: 100vh;
+    padding-bottom: 20vh;
+    flex-direction: column;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.border-image{
+    padding: 10px;
+    width: 600px;
+    height: 600px;
+    background-color: #00000099;
+    border-radius: 40px;
+    position: sticky;
+    top: 10vh;
+    margin-top: 20vh;
+    border: 1px solid red;
+}
+.img-1{
+    background-image: url(../../assets/Маньяк.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    width: 100%;
+    height: 100%;
+}
+.img-2{
+    background-image: url(../../assets/Девушка.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    width: 100%;
+    height: 100%; 
+}
+.img-3{
+    background-image: url(../../assets/Бензопила.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    width: 100%;
+    height: 100%; 
+}
+.img-4{
+    background-image: url(../../assets/Шторка.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    width: 100%;
+    height: 100%; 
+}
+.img-5{
+    background-image: url(../../assets/Упал.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    width: 100%;
+    height: 100%; 
+}
+.image-button{
+    width: 50%;
+    height: 7vh;
+    background-color: red;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 40px;
+    color: black;
+    position: relative;
+    top: 10vh;
+    transition: transform 0.3s ease-in;
+}
+.image-button:hover{
+    transform: scale(1.1);
+    color: red;
+    background-color: black;
+    font-weight: 900;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+
+.container{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.wrapper-video{
+    position: sticky;
+    object-fit: cover;
+    top: -6vh;
+    height: 112vh;
+    width: 100%;
+    background-color: black;
+    margin: 0;
+}
+
+
+.title-container{
+    width: 50%;
+    color: red;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: sticky;
+}
+
+.title-1{
+    width: 100%;
+    top: 20vh;
+    display: flex;
+    justify-content: center;
+margin-bottom: 40vh;
+
+
+}
+
+.title-2{
+    font-size: 30px;
+    width: 50%;
+    height: 40vh;
+    position: sticky;
+    top: 30vh;
+margin-bottom: 30vh;
+}
+
+.title-3{
+    width: 100%;
+    height: 25vh;
+    position: sticky;
+    top: 60vh;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    margin-top: 20vh;
+    margin-bottom: 14vh;
+}
+.image-container{
+    height: max-content;
+    width: 50%;
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    margin-top: 100vh;
+    padding-bottom: 20vh;
+    flex-direction: column;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.border-image{
+    padding: 10px;
+    width: 450px;
+    height: 600px;
+    background-color: #00000099;
+    border-radius: 40px;
+    position: sticky;
+    top: 10vh;
+    margin-top: 20vh;
+}
+
+.img-1{
+    background-image: url(../assets/Маньяк.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    width: 100%;
+    height: 100%;
+}
+.img-2{
+    background-image: url(../assets/Девушка.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    width: 100%;
+    height: 100%; 
+}
+.img-3{
+    background-image: url(../assets/Бензопила.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    width: 100%;
+    height: 100%; 
+}
+.img-4{
+    background-image: url(../assets/Шторка.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    width: 100%;
+    height: 100%; 
+}
+.img-5{
+    background-image: url(../assets/Упал.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    width: 100%;
+    height: 100%; 
+}
+.image-button{
+    width: 50%;
+    height: 7vh;
+    background-color: red;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 40px;
+    color: black;
+    position: relative;
+    top: 10vh;
+    transition: transform 0.3s ease-in;
+}
+.image-button:hover{
+    transform: scale(1.1);
+    color: red;
+    background-color: black;
+    font-weight: 900;
+}
+}
+
+
+
+
+@media (max-width: 851px) {
+.wrapper-video{
+    width: 100%;
+}
+.title-container{
+    align-items: start;
+}
+
+.title-1{
+    justify-content: start;
+}
+.title-3{
+    justify-content: start;
+}
+
+.border-image{
+    width: 370px;
+}
+}
+
+
+
+@media (max-width: 415px) {
+.wrapper-video{
+    width: 100%;
+    margin: 0;
+}
+.card-container-grid{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.title-container{
+    width: 100%;
+}
+.image-container{
+    height: max-content;
+    width: 50%;
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    margin-top: 10vh;
+    padding-bottom: 20vh;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.border-image{
+    padding: 10px;
+    width: 300px;
+    height: 500px;
+    margin-top: 20vh;
+}
+.image-button{
+    width: 200px;
+    height: 7vh;
+    background-color: red;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 40px;
+    color: black;
+    position: relative;
+    top: 20vh;
+    transition: transform 0.3s ease-in;
+    margin-bottom: 10vh;
+}
+.image-button:hover{
+    transform: scale(1.1);
+    color: red;
+    background-color: black;
+    font-weight: 900;
+}
+}
+
+
+
+@media (max-width: 376px) {
+.wrapper-video{
+    background-position: center;
+    background-size: cover;
+    top: 0;
+    height: 133vh;
+    width: 100%;
+    margin: 0;
+}
+.card-container-grid{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+}
+.title-container{
+    width: 100%;
+    height: auto;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: sticky;
+}
+.title-1{
+    width: 100%;
+    height: 40vh;
+    position: sticky;
+    top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+.title-2{
+    width: 50%;
+    height: 40vh;
+    position: sticky;
+    top: 30vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.title-3{
+    width: 100%;
+    height: 25vh;
+    position: sticky;
+    top: 10vh;
+    text-align: center;
+    margin-top: 60vh;
+    justify-content: center;
+}
+.image-container{
+    height: max-content;
+    width: 50%;
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    margin-top: 10vh;
+    padding-bottom: 20vh;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.border-image{
+    padding: 10px;
+    width: 300px;
+    height: 500px;
+    background-color: #00000099;
+    border-radius: 40px;
+    position: sticky;
+    top: 10vh;
+    margin-top: 20vh;
+    border: 1px solid red;
+}
+.img-1{
+    background-image: url(../assets/Маньяк.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    width: 100%;
+    height: 100%;
+}
+.img-2{
+    background-image: url(../assets/Девушка.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    width: 100%;
+    height: 100%; 
+}
+.img-3{
+    background-image: url(../assets/Бензопила.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    width: 100%;
+    height: 100%; 
+}
+.img-4{
+    background-image: url(../assets/Шторка.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    width: 100%;
+    height: 100%; 
+}
+.img-5{
+    background-image: url(../assets/Упал.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    width: 100%;
+    height: 100%; 
+}
+.image-button{
+    width: 200px;
+    height: 7vh;
+    background-color: red;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 40px;
+    color: black;
+    position: relative;
+    top: 20vh;
+    transition: transform 0.3s ease-in;
+    margin-bottom: 10vh;
+}
+.image-button:hover{
+    transform: scale(1.1);
+    color: red;
+    background-color: black;
+    font-weight: 900;
+}
+}
