@@ -13,6 +13,9 @@ export default function End(){
                         <h3>+7 (499) 444-21-74</h3>
                         <h3>kvest.zdes@gmail.com</h3>
                         <h3>г. Москва, Андроновское шоссе, 26с1</h3>
+                        <a  href="https://api-mir-kvestov.ru/api/v3/quests/1350?city_id=1" target="_blank" rel="noopener noreferrer">
+                            <button className='image-button-right-card4'><h2>Забронировать</h2></button>
+                        </a>
                     </div>
 
                     <div className='right-container-map'>

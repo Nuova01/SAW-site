@@ -29,8 +29,6 @@ export default function Feat(){
                         <div className='right-card1'>12+: без контакта;</div>
                         <div className='right-card2'>16+: актер может взять за руку, дотронуться до плеча, отвести в другую комнату;</div>
                         <div className='right-card3'>18+: безболезненный сюжетный контакт в рамках сценария, исключающий риск причинения вреда здоровью.</div>
-                        <button className='image-button-right-card4'><h2>Забронировать</h2></button>
-
                     </div>
                     
 

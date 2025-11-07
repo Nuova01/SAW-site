@@ -8,12 +8,19 @@ export default function Start(){
             <div className="container">
 
                 <video autoPlay loop muted playsInline className="wrapper-video">
-                    <source className='video' src="../../public/IMG_5195.MP4" type="video/mp4" />
+                    <source className='video' src="IMG_5195.MP4" type="video/mp4" />
                 </video>
 
                 <div className='card-container-grid'>
                     
                     <div className='title-container'>
+                        
+                        <div className='title-button'>
+                            <a  href="https://api-mir-kvestov.ru/api/v3/quests/1350?city_id=1" target="_blank" rel="noopener noreferrer">
+                                <button className='image-button'>Забронировать</button>
+                            </a>
+                        </div>
+                        
                         <div className='title-1'>
                             <h3>КВЕСТ ПЕРФОМАНС</h3>
                         </div>
@@ -25,6 +32,7 @@ export default function Start(){
                         <div className='title-3'>
                             <h2>Возрастные ограничения: 14+</h2>
                         </div>
+
                     </div>
 
                     <div className='image-container'>
@@ -43,7 +51,7 @@ export default function Start(){
                         <div className='border-image'>
                             <div className='img-5'></div>
                         </div>
-                        <button className='image-button'>Забронировать</button>
+
                     </div>
 
                 </div>
