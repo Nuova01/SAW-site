@@ -6,7 +6,9 @@
     position: sticky;
     top: 0;
     padding-bottom: 84vh;
-    background-color: black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
+    font-style: italic;
+
 }
 .features-container{
     height: 900vh;
@@ -24,11 +26,12 @@
     top: 0;
 }
 .left-title-card{
-    font-size: 25px;
+    font-size: 30px;
     margin-bottom: 90vh;
     padding: 20px;
     position: sticky;
     top: 10vh;
+    color: red;
 }
 .left-card1{
     font-size: 25px;
@@ -95,11 +98,12 @@
     padding-top: 500vh;
 }
 .right-title-card{
-    font-size: 25px;
+    font-size: 30px;
     margin-bottom: 80vh;
     padding: 20px;
     position: sticky;
     top: 10vh;
+    color: red;
 }
 .right-card1{
     font-size: 25px;
@@ -683,12 +687,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: end;
+    align-items: center;
     position: sticky;
     text-align: center;
 }
 .left-info{
-    width: 100%;
+        background-color: #00000089;
+    border-radius: 40PX;
+    width: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -811,11 +817,9 @@
     display: flex;
     position: sticky;
     top: 0;
-    padding-bottom: 1vh;
-    /* background-color: black; */
+    /* z-index: 1000; */
 }
 .features h1{
-    font-size: 40px;
 }
 .features-container{
     height: 350vh;
@@ -823,16 +827,20 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: end;
+    align-items: center;
     position: sticky;
     text-align: center;
 }
 .left-info{
-    width: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+    background-color: #00000089;
+    border-radius: 40PX;
+    width: 70%;
+
 }
 .left-title-card{
     font-size: 25px;

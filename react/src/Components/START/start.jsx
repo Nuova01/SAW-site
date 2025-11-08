@@ -7,7 +7,15 @@ export default function Start(){
         <>
             <div className="container">
 
-                <video autoPlay loop muted playsInline className="wrapper-video">
+                <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline 
+                preload="auto"
+                poster="poster.jpg"
+                className="wrapper-video"
+                >
                     <source className='video' src="IMG_5195.MP4" type="video/mp4" />
                 </video>
 
