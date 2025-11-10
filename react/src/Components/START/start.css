@@ -449,6 +449,17 @@ margin-bottom: 40vh;
 .wrapper-video{
     width: 100%;
     margin: 0;
+    display: none;
+}
+.wrapper-video-mobile{
+    background-size: cover;
+    object-fit: cover;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    top: 0;
+    position: sticky;
+    top: 0;
 }
 .card-container-grid{
     width: 100%;

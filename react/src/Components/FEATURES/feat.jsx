@@ -11,7 +11,9 @@ export default function Feat(){
                 </div>
 
                 <div className='features-container'>
-
+                    <div className='features-mobile'>
+                        <h1>Особенности</h1>
+                    </div>
                     <div className='left-info'>
                         <h2 className='left-title-card'>Вас ждет:</h2>
                         <div className='left-card1'>– более 5 локаций;</div>

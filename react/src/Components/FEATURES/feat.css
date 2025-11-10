@@ -8,7 +8,9 @@
     padding-bottom: 84vh;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
     font-style: italic;
-
+}
+.features-mobile{
+    display: none;
 }
 .features-container{
     height: 900vh;
@@ -673,27 +675,36 @@
 
 @media (max-width: 660px) {
 .features{
+display: none;
+    
+}
+.features-mobile{
     width: 100%;
+    height: 11vh;
     color: red;
     display: flex;
+    justify-content: center;
     position: sticky;
-    padding-bottom: 1vh;
+    top: 0;
+    /* padding-bottom: 1vh; */
     background-color: black;
+    z-index: 100;
+    padding: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
+    font-style: italic;
 }
 .features-container{
-    height: 350vh;
+    height: 100%;
     width: 100%;
-    z-index: 100;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: sticky;
     text-align: center;
+
 }
 .left-info{
-        background-color: #00000089;
-    border-radius: 40PX;
     width: 70%;
     display: flex;
     flex-direction: column;
@@ -778,6 +789,7 @@
     top: 10vh;
     padding-top: 0vh;
     margin-top: 0vh;
+    padding-bottom: 50vh;
 }
 .right-title-card{
     font-size: 30px;
@@ -812,24 +824,39 @@
 
 @media (max-width: 376px) {
 .features{
+display: none;
+    
+}
+.features-mobile{
     width: 100%;
+    height: max-content;
     color: red;
     display: flex;
+    justify-content: center;
+    align-items: end;
     position: sticky;
     top: 0;
-    /* z-index: 1000; */
+    background-color: black;
+    z-index: 100;
+    padding: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
+    font-style: italic;
 }
-.features h1{
+
+.features-mobile h1 {
+    margin: 0;
+    width: 100%;
 }
 .features-container{
-    height: 350vh;
-    z-index: 100;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: sticky;
     text-align: center;
+
 }
 .left-info{
 
@@ -912,15 +939,13 @@
     flex-direction: column;
     position: relative;
     top: 10vh;
-    padding-top: 0vh;
-    margin-top: 0vh;
 }
 .right-title-card{
     font-size: 25px;
     margin-bottom: 5vh;
     padding: 20px;
     position: relative;
-    top: 10vh;
+    top: 30vh;
     color: red;
 }
 .right-card1{
@@ -928,21 +953,21 @@
     margin-bottom: 5vh;
     padding: 20px;
     position: relative;
-    top: 10vh;
+    top: 60vh;
 }
 .right-card2{
     font-size: 20px;
     margin-bottom: 5vh;
     padding: 20px;
     position: relative;
-    top: 10vh;
+    top: 70vh;
 }
 .right-card3{
     font-size: 20px;
-    margin-bottom: 5vh;
+    /* margin-bottom: 5vh; */
     padding: 20px;
     position: relative;
-    top: 10vh;
+    top: 90vh;
 }
 
 }

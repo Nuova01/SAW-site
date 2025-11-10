@@ -3,6 +3,7 @@
     height: 100%;
     position: sticky;
     top: 0;
+    margin: 0;
 }
 .desc-back{
     background: url(../../assets/Стул.png);

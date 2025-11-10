@@ -6,7 +6,6 @@ export default function Start(){
     return(
         <>
             <div className="container">
-
                 <video 
                 autoPlay 
                 loop 
@@ -16,7 +15,19 @@ export default function Start(){
                 poster="poster.jpg"
                 className="wrapper-video"
                 >
-                    <source className='video' src="IMG_5195.MP4" type="video/mp4" />
+                    <source className='video' src="SAWPC.mp4" type="video/mp4" />
+                </video>
+
+                <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline 
+                preload="auto"
+                poster="poster.jpg"
+                className="wrapper-video-mobile"
+                >
+                    <source className='video' src="SAW.mp4" type="video/mp4" />
                 </video>
 
                 <div className='card-container-grid'>
