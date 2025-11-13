@@ -1,10 +1,59 @@
 import React from 'react';
-import './end.css'
+import { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "./end.css";
 
-export default function End(){
-    return(
-        <>
-            <div className='container'>
+gsap.registerPlugin(ScrollTrigger);
+
+export default function End() {
+  const containerRef = useRef(null);
+  const boxRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const questSlides2 = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top top",
+          end: "4000 center",
+          scrub: true,
+          pin: true,
+          markers: true,
+        },
+      });
+
+      questSlides2
+        .fromTo(
+          boxRef.current,
+          { opacity: 0, width: "100px", height: "100px" },
+          { opacity: 1, width: "100%", duration: 2 }
+        )
+        .to(boxRef.current, { height: "100%", duration: 2 })
+        .to(boxRef.current, { scale: 0.9, duration: 2 })
+        .to(boxRef.current, { scale: 1, duration: 2 })
+        .fromTo(
+          boxRef.current,
+          { height: "100%" },
+          { width: "100px", scale: 0.9, duration: 2 }
+        )
+        .to(boxRef.current, { height: "100px", opacity: 0, duration: 2 });
+    }, containerRef);
+
+    return () => ctx.revert(); // очищаем анимации при размонтировании
+  }, []);
+
+  return (
+    <div className="container4" ref={containerRef}>
+      <div className="contBox4 contBox14" ref={boxRef}></div>
+    </div>
+  );
+}
+
+
+
+
+            {/* <div className='container'>
 
                 <div className='footer-container'>
 
@@ -24,7 +73,4 @@ export default function End(){
  
                 </div>
 
-            </div>
-        </>
-    )
-}
+            </div> */}

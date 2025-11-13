@@ -5,32 +5,27 @@ import './start.css'
 export default function Start(){
     return(
         <>
-            <div className="container">
-                <video 
-                autoPlay 
-                loop 
-                muted 
-                playsInline 
-                preload="auto"
-                poster="poster.jpg"
-                className="wrapper-video"
-                >
-                    <source className='video' src="SAWPC.mp4" type="video/mp4" />
-                </video>
+            <div className="containerStart">
+            <div className="contBox1">
+                <div className='video-container'>
+                    <video 
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline 
+                    preload="auto"
+                    poster="poster.jpg"
+                    className="wrapper-video"
+                    >
+                        <source className='video' src="SAWPC.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                
+            </div>
+            </div>
+            {/* <div className="container"> */}
 
-                <video 
-                autoPlay 
-                loop 
-                muted 
-                playsInline 
-                preload="auto"
-                poster="poster.jpg"
-                className="wrapper-video-mobile"
-                >
-                    <source className='video' src="SAW.mp4" type="video/mp4" />
-                </video>
-
-                <div className='card-container-grid'>
+                {/* <div className='card-container-grid'>
                     
                     <div className='title-container'>
                         
@@ -73,9 +68,9 @@ export default function Start(){
 
                     </div>
 
-                </div>
+                </div> */}
 
-            </div>
+            {/* </div> */}
         </>
     )
 }
