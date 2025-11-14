@@ -12,61 +12,84 @@ export default function The(){
     const item2img = useRef(null);
     const item3 = useRef(null);
     const item5 = useRef(null);
-    const item6 = useRef(null);
     const item7 = useRef(null);
-
 
     const ynika = useRef(null);
     const el = useRef(null);
     const nie = useRef(null);
 
+    const ei = useRef(null);
+
+    const gear1 = useRef(null);
+    const gear2 = useRef(null); 
+    const block = useRef(null); 
+
 
     useEffect(() => { 
+
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: containerThe.current,
                 start: "top top",
-                end: "5000 top",
+                end: "8000 top",
                 scrub: true,
                 pin: true,
-                markers: true
+                // markers: true
             }
         });
 
-        
+
         tl
         .fromTo(title.current,{opacity:0,scale:1,  x:400,}, {opacity:1,scale:1.1,color:'grey'})
-        .fromTo(item1.current, {x:100,scale:0.6,opacity:0,},{opacity:1,x:-350, y:-20, scale:5,opacity:1,color:'white', zIndex:100, textShadow:'2px 2px 3px grey'})
-        .fromTo(item2img.current,{x:100,y:-100,scale:0.6,opacity:0,},{opacity:1,x:-150,y:-50, scale:1.8,opacity:1,} )
-        .fromTo(item3.current,{opacity:0,x:-100,y:-200,scale:10},{opacity:1,scale:6,y:-150, x:200, color:'white',zIndex:100, textShadow:'2px 2px 3px grey'})
+
+        .fromTo(item1.current, {x:100,scale:0.6,opacity:0,},{x:-350, y:-20, scale:5,opacity:1,color:'white', zIndex:100, textShadow:'2px 2px 3px grey', duration:'5'})
+        .fromTo(item2img.current,{x:100,y:-100,scale:0.6,opacity:0,},{x:-150,y:-50, scale:1.8,opacity:1, duration:'5'} )
+        .fromTo(item3.current,{opacity:0,x:-100,y:-200,scale:10},{opacity:1,scale:6,y:-150, x:200, color:'white',zIndex:100, textShadow:'2px 2px 3px grey', duration:'5'})
+
+            .to(item1.current,{opacity:0, duration:'5'})
+            .to(item2img.current,{opacity:0, duration:'5'})
+            .to(item3.current,{opacity:0, duration:'5'})
+
+        .fromTo(ynika.current,{opacity:0,scale:3,x:-200,y:-230,rotationZ:'0deg'},{rotationZ:'-90deg',opacity:1,color:'#222', duration:'5'})
+        .fromTo(el.current,{opacity:0,scale:3,x:-200,y:-530},{opacity:1,color:'red', duration:'5'})
+        .fromTo(nie.current,{rotationZ:'0deg',opacity:0,scale:3,x:-200,y:-815},{rotationZ:'-90deg',opacity:1,color:'#222', duration:'5'})
+            .to(el.current,{rotationZ:'2deg', duration:'5'})
+        .fromTo(item5.current,{opacity:0,scale:3,x:-254,y:-737},{opacity:1,color:'#222', duration:'5'})
+            .to(ynika.current,{borderBottom:'2px solid red', duration:'5'})
+            .to(nie.current,{borderTop:'2px solid red', duration:'5'})
+            .to(item5.current,{textShadow:'2px 2px 4px red', duration:'5'})
+            .to({},{duration:3})
+
+            .to(ynika.current,{textShadow:'2px 2px 4px white', duration:'5'})
+            .to(nie.current,{textShadow:'2px 2px 4px white', duration:'5'},'<')
+            .to(ynika.current,{opacity:0, duration:'5'})
+            .to(nie.current,{opacity:0, duration:'5'},'<')
+            .to(item5.current,{opacity:0, duration:'5'})
+            .to(el.current,{rotationZ:'180deg',opacity:0, duration:'5'})
+
+        .fromTo(ei.current,{opacity:0,scale:3,x:-200,y:-840},{opacity:1,rotationZ:'180deg',color:'red', duration:'5'})
+            .to(ei.current,{x:-500, scale:4,duration:6}, '>0.5')
+
+        .fromTo(item7.current,{x:800,y:-740,rotationZ:'-90deg', opacity:1, color:'white', scale:2},{scale:5,x:0,opacity:1,textShadow:'2px 2px 4px white',rotationZ:'0deg',duration:6}, '<')
+            .to([gear1.current,gear2.current], {opacity:1, duration:6},)
+            .to(item7.current,{textShadow:'5px 5px 5px red', duration:'5'},)
+            .to(ei.current,{opacity:0, duration:'5'},'>0.5')
+            .to({},{duration:5})
+            .to(item7.current,{opacity:0, duration:'5'})
+            .to(title.current,{x:500, opacity:0, duration:'5'})
+            .to({},{duration:2})
 
 
-            .to(item1.current,{opacity:0})
-            .to(item2img.current,{opacity:0})
-            .to(item3.current,{opacity:0})
-            
-
-        .fromTo(ynika.current,{opacity:0,scale:3,x:-200,y:-230,rotationZ:'0deg'},{rotationZ:'-90deg',opacity:1,color:'#222'})
-        .fromTo(el.current,{opacity:0,scale:3,x:-200,y:-530},{opacity:1,color:'red'})
-        .fromTo(nie.current,{rotationZ:'0deg',opacity:0,scale:3,x:-200,y:-815},{rotationZ:'-90deg',opacity:1,color:'#222'})
-
-
-            .to(el.current,{rotationZ:'2deg',})
-
-
-        .fromTo(item5.current,{opacity:0,scale:3,x:-254,y:-737},{opacity:1,color:'#222'})
-
-
-            .to(ynika.current,{borderBottom:'2px solid red'})
-            .to(nie.current,{borderTop:'2px solid red'})
-            .to(item5.current,{textShadow:'2px 2px 4px red'})
 
 
         return () => {
-        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-        tl.kill();
+            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+            tl.kill();
+
         };
+
     }, []);
+
 
 return(
     <>
@@ -80,9 +103,13 @@ return(
             <div ref={el} className='l'><h3>Л</h3></div>
             <div ref={nie} className='l'><h3>ЬНЫЕ</h3></div>
             <div ref={item5} className='theItem5'><h3>ГОЛОВО ОМКИ</h3></div>
-            <div ref={item6} className='theItem6'><h3>И</h3></div>
-            <div ref={item7} className='theItem7'><h3>МЕХАНИЗМЫ</h3></div>
-
+            <div ref={ei} className='theItem6'><h3>И</h3></div>
+                <div ref={item7} className='theItem7'>
+                    <div ref={gear2} className="gear gear2"></div> {/* <<< добавлено */}
+                    <div className='itemMehText'><h3>МЕХАНИЗМЫ</h3></div>
+                    <div ref={gear1} className="gear gear1"></div> {/* <<< добавлено */}
+                </div>
+            <div ref={block} className="mechBlock"></div>   {/* <<< добавлено */}
 
         </div>
     </>

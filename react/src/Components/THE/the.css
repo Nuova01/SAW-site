@@ -1,7 +1,7 @@
 .containerThe{
     width: 100%;
-    height: 500vh;
-    background-color: black;
+    height: 200vh;
+    background-color:black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,7 +20,69 @@
     border-radius: 200px;
 }
 
+.theItem6{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    border-radius: 9px;
+}
+
+.theItem7{
+    width: 10%;
+    height: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.itemMehText{
+    position: absolute;
+    z-index: 100;
+}
+
+
 
 .l{
     transform: rotate(-90deg);
 }
+
+.gear{
+    background-image: url(../../assets/шестеренка.svg);
+    background-position: center;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    /* background-color:#00000099; */
+    color:aliceblue;
+    border-radius: 100px;
+    opacity: 0;
+}
+
+.gear1{
+    transform: rotate(90deg);
+    animation:go 14s linear infinite ;
+
+}
+@keyframes go {
+    from { transform: rotate(90deg); }
+    to   { transform: rotate(450deg); }
+}
+.gear2{
+    animation:goi 14s linear infinite ;
+
+}
+@keyframes goi {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(-360deg); }
+}
+
+
+
+/* 
+.block{
+    width: 90vw;
+    height: 90vh;
+    background-color: aliceblue;
+    position: absolute;
+    z-index: 1000;
+} */
