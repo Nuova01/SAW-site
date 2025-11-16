@@ -1,4 +1,4 @@
-.containerEnd{
+/* .containerEnd{
     width: 100%;
     height: 100vh;
     display: flex;
@@ -107,4 +107,128 @@ color: red;
 
 .box{
     border: 4px solid #ffffff1a;
+} */
+
+
+@media screen and (max-width:767px) {
+
+ .containerEnd{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
 }
+
+.cont-quest-end{
+    padding-top: 0vh;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    background-color: wheat;
+    gap: 0;
+}
+.box-group-1, .box-group-2, .mobile{
+    width: 100%;
+    height: max-content;
+}
+
+.boxEnd{
+    /* border: 4px solid red; */
+    /* width: 100%; */
+    /* height: 14.285714286vh; */
+
+}
+
+.box1end{
+    width: 100%;
+    height: 14.285714286vh;
+    border-radius: 0;
+
+    background-image: url(../../assets/квесты/anna.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.box2end {
+    width: 100%;
+    height: 14.285714286vh;
+    background-image: url(../../assets/квесты/metro.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0;
+
+
+}
+.box3end{
+    width: 100%;
+    height: 14.285714286vh;
+    background-image: url(../../assets/квесты/cherniy.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0;
+
+
+}
+.box4end{
+    width: 100%;
+    height: 14.285714286vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../../assets/Маньяк.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0;
+    /* z-index: 5; */
+    color: white;
+}
+
+
+
+
+
+.box5end{
+    width: 100%;
+    height: 14.285714286vh;
+    background-image: url(../../assets/квесты/cherni2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0;
+
+
+}
+.box6end{
+    width: 100%;
+    height: 14.285714286vh;
+    background-image: url(../../assets/квесты/grizli.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0;
+
+
+}
+.box7end{
+    width: 100%;
+    height: 14.285714286vh;
+    background-image: url(../../assets/квесты/lift.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0;
+
+}
+
+}
+
+    

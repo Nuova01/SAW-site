@@ -8,93 +8,174 @@ import './logo.css'
 
 export default function Logo(){
   const logoRef = useRef(null);
+  const contLogo = useRef(null)
   const containerRef = useRef(null);
   const contQuestRef = useRef(null);
-  const boxGroup1Ref = useRef(null);
+  const box1Ref = useRef(null)
+  const box2Ref = useRef(null)
   const box3Ref = useRef(null);
   const box4Ref = useRef(null);
+  const box5Ref = useRef(null);
+  const box6Ref = useRef(null)
+  const box7Ref = useRef(null)
   const contBox4pRef = useRef(null);
+  const boxGroup1Ref = useRef(null);
+  const boxGroup2Ref = useRef(null);
   const box4p1Ref = useRef(null);
   const box4p2Ref = useRef(null);
   const box4h1Ref = useRef(null);
-  const box5Ref = useRef(null);
-  const boxGroup2Ref = useRef(null);
+
+
+
 
 
   useEffect(() => {
+    ScrollTrigger.matchMedia({
+      ////////////////////////
+      //////////PC////////////
+      ////////////////////////
+      '(min-width:1024px)': function() {
 
-    gsap.fromTo(logoRef.current,{opacity: 0},{opacity: 1, duration: 1, });
+        const logoTl = gsap.timeline({
+          scrollTrigger: {
+          trigger: document.body,
+          start: 0,
+          end: () => window.innerHeight * 1.2,
+          scrub: 0.6
+          }
+        });
+
+        const tl = gsap.timeline({
+          scrollTrigger: {
+          trigger: containerRef.current,
+          start: "600 center",
+          end: "8000 center",
+          scrub: true,
+          markers: true,
+          pin: true
+          }
+        });
+
+      gsap.fromTo(contLogo.current,{opacity: 0, },{opacity: 1, duration: 1, });
+      logoTl.fromTo(contLogo.current,{top: '50vh',scale: 5,textShadow: '0 0 2px rgba(255, 0, 0, 0.3)'},
+      {top: 0,scale: 0.7,xPercent:-430,marginLeft: 0,textShadow: '0 0 2px rgba(255, 0, 0, 0)',duration: 0.8,ease: "power1.inOut",});
+
+      tl
+      .fromTo(contQuestRef.current,{ width: '300%', height: '100vh',x: -900, y:150, opacity:0, gap: '10vw' },{ width: '100%', height: 'max-content', x: 0,opacity:1,gap: 0 })
+        .to(contQuestRef.current,{ width: '100%', height: 'max-content',opacity:1, scale:1.1,})
+      .fromTo(box4Ref.current,{ width: '20%', height: '52vh',  },{ width: '50%', height: '50vh', scale:1.01,y: -80  })
+        .to(box4Ref.current,{ width: '100%', height: '70vh',  scale:1.1, zIndex:100, },)
+        .to(box4p1Ref.current,{opacity:1, scale:1.1, color:'white'})
+        .to(box4p2Ref.current,{opacity:1, scale:1.1, color:'white'})
+      .fromTo(box4h1Ref.current,{opacity:0, scale:2, color:'white',textShadow: '0px 0px 0px black'},{opacity:1,y:100, scale:3, textShadow: '3px 3px 3px black'})
+        .to(boxGroup1Ref.current,{opacity:0, scale:1.1, })
+        .to(boxGroup2Ref.current,{opacity:0, scale:1.1, })
+        .to(box3Ref.current,{opacity:0, scale:1.1, })
+        .to(box5Ref.current,{opacity:0, scale:1.1, })
+        .to(contBox4pRef.current,{opacity:0, scale:1, color:'black',})
+        .to(box4h1Ref.current,{opacity:0, scale:4, color:'blacl', textShadow: '6px 6px 1px black'})
+        .to(box4Ref.current,{y:400,scale:1.3,opacity:0,})
+        .to(box4Ref.current,{y:600,});
+  
+    },
+    ///////////////////////////
+    ////////MOBILE/////////////
+    ///////////////////////////
+      '(max-width:767px)': function() {
+
+        const logoTl = gsap.timeline({
+          scrollTrigger: {
+          trigger: document.body,
+          start: 0,
+          end: () => window.innerHeight * 1.2,
+          scrub: 0.6
+          }
+        });
+
+        const tl = gsap.timeline({
+          scrollTrigger: {
+          trigger: containerRef.current,
+          start: "center center",
+          end: "5000 center",
+          scrub: true,
+          markers: true,
+          pin: true
+          }
+        });
+
+        gsap.set([logoRef.current,contLogo.current,containerRef.current,contQuestRef.current,box1Ref.current,box2Ref.current,box3Ref.current,box4Ref.current,box5Ref.current,box6Ref.current,box7Ref.current,contBox4pRef.current,boxGroup1Ref.current,boxGroup2Ref.current,box4p1Ref.current,box4p2Ref.current,box4h1Ref.current],{
+          clearProps:'all'
+        });
 
 
-    let logoTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: document.body,
-        start: 0,
-        end: () => window.innerHeight * 1.2,
-        scrub: 0.6
-      },
-    });
+      gsap.fromTo(contLogo.current,{opacity: 0, },{opacity: 1, duration: 1, top: '45vh'});
+      logoTl.fromTo(contLogo.current,{top: '45vh',left:'40%',scale: 4,},
+      {top: 0,scale: 1,left: 0,duration: 0.8,ease: "power1.inOut",});
 
-    logoTl.fromTo(logoRef.current,{top: '50vh',scale: 5,textShadow: '0 0 2px rgba(255, 0, 0, 0.3)'},
-    {top: 0,scale: 0.7,x:-660,marginLeft: 0,textShadow: '0 0 2px rgba(255, 0, 0, 0)',duration: 0.8,ease: "power1.inOut",});
+      tl
+        .fromTo(box7Ref.current,{opacity:0,scale:0.7},{opacity:1, scale:1})
+        .fromTo(box6Ref.current,{opacity:0,scale:0.7},{opacity:1, scale:1})
+        .fromTo(box5Ref.current,{opacity:0,scale:0.7},{opacity:1, scale:1})
+        .fromTo(box4Ref.current,{opacity:0,scale:0.7},{opacity:1, scale:1})
+        .fromTo(box3Ref.current,{opacity:0,scale:0.7},{opacity:1, scale:1})
+        .fromTo(box2Ref.current,{opacity:0,scale:0.7},{opacity:1, scale:1})
+        .fromTo(box1Ref.current,{opacity:0,scale:0.7},{opacity:1, scale:1})
+        .fromTo(containerRef.current,{},{duration:3})
+
+        .to(box7Ref.current,{opacity:0,scale:0.7, duration:2,})
+        .to(box1Ref.current,{opacity:0,scale:0.7, duration:2,},'<')
+        .to(box6Ref.current,{opacity:0,scale:0.7, duration:2,})
+        .to(box2Ref.current,{opacity:0,scale:0.7, duration:2,},'<')
+        .to(box5Ref.current,{opacity:0,scale:0.7, duration:2,})
+        .to(box3Ref.current,{opacity:0,scale:0.7, duration:2,},'<')
+        .to([box7Ref.current,box1Ref.current,box6Ref.current,box2Ref.current,box5Ref.current,box3Ref.current],{height:'0vh',duration:2,})
+
+        .fromTo(box4Ref.current,{},{height:'100%', borderRadius:'50px',duration:2},'<')
+        
+        .fromTo(box4p1Ref.current,{opacity:0, y:'-300%'},{opacity:1, y:0,})
+        .fromTo(box4p2Ref.current,{opacity:0, y:'300%'},{opacity:1, y:0,})
+        .fromTo(box4h1Ref.current,{opacity:0, scale:0.7, color:'#00000099'},{opacity:1, scale:2, textShadow:'3px 3px 6px red'})
+
+        .fromTo(containerRef.current,{},{duration:3})
+
+    },
 
 
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "600 center",
-        end: "8000 center",
-        scrub: true,
-        // markers: true,
-        pin: true
-      }
-    });
 
 
-    tl
-    .fromTo(contQuestRef.current,{ width: '300%', height: '100vh',x: -900, y:150, opacity:0, gap: '10vw' },{ width: '100%', height: 'max-content', x: 0,opacity:1,gap: 0 })
-      .to(contQuestRef.current,{ width: '100%', height: 'max-content',opacity:1, scale:1.1,})
-    .fromTo(box4Ref.current,{ width: '20%', height: '52vh',  },{ width: '50%', height: '50vh', scale:1.01,y: -80  })
-      .to(box4Ref.current,{ width: '100%', height: '70vh',  scale:1.1, zIndex:100, },)
-      .to(box4p1Ref.current,{opacity:1, scale:1.1, color:'white'})
-      .to(box4p2Ref.current,{opacity:1, scale:1.1, color:'white'})
-    .fromTo(box4h1Ref.current,{opacity:0, scale:2, color:'white',textShadow: '0px 0px 0px black'},{opacity:1,y:100, scale:3, textShadow: '3px 3px 3px black'})
-      .to(boxGroup1Ref.current,{opacity:0, scale:1.1, })
-      .to(boxGroup2Ref.current,{opacity:0, scale:1.1, })
-      .to(box3Ref.current,{opacity:0, scale:1.1, })
-      .to(box5Ref.current,{opacity:0, scale:1.1, })
-      .to(contBox4pRef.current,{opacity:0, scale:1, color:'black',})
-      .to(box4h1Ref.current,{opacity:0, scale:4, color:'blacl', textShadow: '6px 6px 1px black'})
-      .to(box4Ref.current,{y:400,scale:1.3,opacity:0,})
-      .to(box4Ref.current,{y:600,});
+    })
 
 
   return () => {
-    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    logoTl.kill();
+    ScrollTrigger.clearMatchMedia();
   };
 }, []);
+
+      
+
+
 
 
   return (
     <>
       <div className="o-wrapper">
         <header className="header">
-          <h1 ref={logoRef} className="logo"></h1>
+          <div ref={contLogo} className="contLogo">
+            <div ref={logoRef} className="logo"></div>
+          </div>
         </header>
 
         <div ref={containerRef} className="container">
           <div ref={contQuestRef} className="cont-quest">
             
               <div ref={boxGroup1Ref} className="box-group-1">
-                  <div className="box1"></div>
-                  <div className="box2"></div>
+                  <div ref={box1Ref} className="box1"></div>
+                  <div ref={box2Ref} className="box2"></div>
               </div>
 
               <div ref={box3Ref} className="box3"></div>
 
               <div ref={box4Ref} className="box4">
-
                 <div ref={contBox4pRef} className='contBox4p'>
                   <p ref={box4p1Ref} className='box4p1'>КВЕСТ</p>
                   <p ref={box4p2Ref} className='box4p2'>ПЕРФОМАНС</p>
@@ -106,8 +187,8 @@ export default function Logo(){
               <div ref={box5Ref} className="box5"></div>
 
               <div ref={boxGroup2Ref} className="box-group-2">
-                  <div className="box6"></div>
-                  <div className="box7"></div>
+                  <div ref={box6Ref} className="box6"></div>
+                  <div ref={box7Ref} className="box7"></div>
               </div>
 
           </div>

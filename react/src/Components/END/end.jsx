@@ -19,7 +19,6 @@ export default function End() {
 
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
       const questSlides2 = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
@@ -32,19 +31,20 @@ export default function End() {
       });
 
       questSlides2
-        .fromTo(boxRef.current,{ opacity: 0, width: "100px", height: "100px" },
-                              { opacity: 1, width: "100%", duration: 2 })
-        .to(boxRef.current, { height: "100%", duration: 2 })
+        .fromTo(boxRef.current,{ opacity: 0, width: "10vw", height: "10vh" },
+                              { opacity: 1, width: "90vw", duration: 2 })
+        .to(boxRef.current, { height: "90vh", duration: 2 })
         .to(boxRef.current, { scale: 0.9, duration: 2 })
-        .fromTo(opa.current,{opacity:0, x:0},{opacity:1, x:-350,y:100},'<')
+        .fromTo(opa.current,{opacity:0, },{opacity:1,duration: 2 },'<')
 
         .to(boxRef.current, { scale: 1, duration: 2 })
-        .fromTo(boxRef.current,{ height: "100%" },{ width: "100px", scale: 0.9, duration: 2 })
+        .fromTo(boxRef.current,{ height: "90vh" },{ width: "10vw",  duration: 2 })
         .to(opa.current,{opacity:0,},'<')
-        .to(boxRef.current, { height: "100px", opacity: 0, duration: 2 });
-    }, containerRef);
+        .to(boxRef.current, { height: "10vh", opacity: 0, duration: 2 });
 
-    return () => ctx.revert(); // очищаем анимации при размонтировании
+  return () => {
+    ScrollTrigger.getAll().forEach((t) => t.kill());
+  };
   }, []);
 
   return (

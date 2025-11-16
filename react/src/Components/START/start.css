@@ -1,50 +1,105 @@
 html{
     margin: 0;
-}
-.theTitle{
-    font-size: 3vw;
+    overflow-x: hidden;
 }
 
-.okakImg{
-    width: 200px;
-    height: 200px;
-    background-image: url(../../assets/бу.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 .containerStart{
     width: 100%;
-    height: max-content;
-    /* margin-left: 0.8vw; */
-    /* background-color: aliceblue; */
-        position: sticky;
-    top: 0;
+    height: 100%;
+    margin-bottom: 100vh;
+    overflow: hidden;
 }
 .contBox1{
-    right: 1vw;
     width: 100%;
-    height: 96vh;
-    position: sticky;
-    top: 10vh;
-    margin-top: 2vh;
-
+    height: 100vh;
     border: 2px solid red;
     border-radius:50px ;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+.video-container{
+    width: 100%;
+    height: 100%;
 }
 .wrapper-video{
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;        /* делает cover как у фона */
-  z-index: 0;   
+   object-fit: cover; 
   border-radius: 50px;
   opacity: 0;
+}
+
+.theStartTitle{
+    width: 100%;
+    height: max-content;
+    color: aliceblue;
+    font-size: 30px;
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    padding-right: 2vw;
+    align-items: center;
+}
+
+
+.okak{
+    position: absolute;
+    color: white;
+    opacity: 0;
+}
+
+@media screen and (max-width:767px){
+    html{
+    margin: 0;
+}
+
+.containerStart{
+    width: 100%;
+    height: 100%;
+}
+.contBox1{
+    width: 100%;
+    height: 100vh;
+    border: 2px solid red;
+    border-radius:50px ;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+
+}
+.video-container{
+    width: 100%;
+    height: 100%;
+}
+.wrapper-video{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+   object-fit: cover; 
+  border-radius: 50px;
+  opacity: 0;
+}
+
+.theStartTitle{
+    width: 100%;
+    height: max-content;
+    color: aliceblue;
+    font-size: 70%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    padding-right: 2vw;
+    align-items: center;
 }
 
 .okak{
     position: absolute;
     color: white;
+    opacity: 0;
 }
+}
+

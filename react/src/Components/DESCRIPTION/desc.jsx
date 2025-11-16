@@ -6,50 +6,123 @@ import React from 'react';
 import "./desc.css";
 
 
-export default function Desc() {
-  const containerRef = useRef(null);
-  const boxRef = useRef(null);
-  const slide1Ref = useRef(null);
-  const slide2Ref = useRef(null);
-  const slide3Ref = useRef(null);
-  const slide4Ref = useRef(null);
-  const slide5Ref = useRef(null);
-  const slide6Ref = useRef(null);
+export default function Desc(){
+    const containerRef = useRef(null);
+    const boxRef = useRef(null);
+    const slide1Ref = useRef(null);
+    const slide2Ref = useRef(null);
+    const slide3Ref = useRef(null);
+    const slide4Ref = useRef(null);
+    const slide5Ref = useRef(null);
+    const slide6Ref = useRef(null);
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const contSlide = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top top",
-          end: "8000 top",
-          scrub: true,
-          pin: true,
-          // markers: true
-        }
-      });
+    
+    useEffect(() => {
+      ScrollTrigger.matchMedia({
+        ////////////////////////
+        //////////PC////////////
+        ////////////////////////
+        '(min-width:1024px)': function() {
 
-      contSlide
-      .fromTo(boxRef.current,{ x: -800, opacity: 0, scale: 1 },{ x: 0, opacity: 1, duration: 10 })
-        .to(boxRef.current, { scale: 0.8, duration: 10 })
-      .fromTo(slide1Ref.current,{opacity:0, scale:0.5, duration: 10},{opacity:1, scale:1, x:-90,y:-80, duration: 10})
-      .fromTo(slide2Ref.current,{opacity:0, scale:0.5, duration: 10},{opacity:1, scale:1, x:700,y:400, duration: 10})
-      .fromTo(slide3Ref.current,{opacity:0, scale:0.5, duration: 10},{opacity:1, scale:1, x:-30,y:150, duration: 10})
-      .fromTo(slide4Ref.current,{opacity:0, scale:0.5, duration: 10},{opacity:1, scale:1, x:800,y:-700, duration: 10})
-      .fromTo(slide5Ref.current,{opacity:0, scale:0.5, duration: 10},{opacity:1, scale:1, x:900,y:-700, duration: 10})
-      .fromTo(slide6Ref.current,{opacity:0, scale:0.5, duration: 10},{opacity:1, scale:1, x:150,y:-1150, duration: 10})
-      .to(slide1Ref.current,{scale:0.5,opacity:0, duration: 10},)
-      .to(slide2Ref.current,{scale:0.5,opacity:0, duration: 10},'<')
-      .to(slide3Ref.current,{scale:0.5,opacity:0, duration: 10},'<')
-      .to(slide4Ref.current,{scale:0.5,opacity:0, duration: 10},'<')
-      .to(slide5Ref.current,{scale:0.5,opacity:0, duration: 10},'<')
-      .to(slide6Ref.current,{scale:0.5,opacity:0, duration: 10},'<')
-        .to(boxRef.current, { scale: 1, duration: 10 },'<')
-        .to(boxRef.current, { x: -800, opacity: 0, duration: 10 });
-    }, containerRef);
+          const ctx = gsap.context(() => {
+            const contSlide = gsap.timeline({
+              scrollTrigger: {
+                trigger: containerRef.current,
+                start: "top top",
+                end: "7000 top",
+                scrub: true,
+                pin: true,
+                // markers: true
+              }
+            });
 
-    return () => ctx.revert(); // очищаем анимации при размонтировании
-  }, []);
+            contSlide
+            .fromTo(boxRef.current,{ x: -800, opacity: 0, scale: 1 },{ x: 0, opacity: 1, duration: 10 })
+              .to(boxRef.current, { scale: 0.8, duration: 10 })
+              
+            .fromTo(slide1Ref.current,{opacity:0, scale:0.5, duration: 10},{opacity:1, scale:1, xPercent:-9,yPercent:-30, duration: 10})
+            .fromTo(slide2Ref.current,{opacity:0, scale:0.5, duration: 10},{opacity:1, scale:1, xPercent:130,yPercent:230, duration: 10})
+            .fromTo(slide3Ref.current,{opacity:0, scale:0.5, duration: 10},{opacity:1, scale:1, xPercent:-3,yPercent:30, duration: 10})
+            .fromTo(slide4Ref.current,{opacity:0, scale:0.5, duration: 10},{opacity:1, scale:1, xPercent:160,yPercent:-230, duration: 10})
+            .fromTo(slide5Ref.current,{opacity:0, scale:0.5, duration: 10},{opacity:1, scale:1, xPercent:160,yPercent:-300, duration: 10})
+            .fromTo(slide6Ref.current,{opacity:0, scale:0.5, duration: 10},{opacity:1, scale:1, xPercent:30,yPercent:-330, duration: 10})
+
+            .fromTo(containerRef.current,{},{duration:10})
+            
+              .to(slide1Ref.current,{scale:0.5,opacity:0, duration: 10},)
+              .to(slide2Ref.current,{scale:0.5,opacity:0, duration: 10},'<')
+              .to(slide3Ref.current,{scale:0.5,opacity:0, duration: 10},'<')
+              .to(slide4Ref.current,{scale:0.5,opacity:0, duration: 10},'<')
+              .to(slide5Ref.current,{scale:0.5,opacity:0, duration: 10},'<')
+              .to(slide6Ref.current,{scale:0.5,opacity:0, duration: 10},'<')
+
+              .to(boxRef.current,{ scale: 1, duration: 10 },'<')
+              .to(boxRef.current,{ x: -800, opacity: 0, duration: 10 });
+          }, containerRef);
+        },
+
+        ///////////////////////////
+        ////////MOBILE/////////////
+        ///////////////////////////
+        '(max-width:767px)': function() {
+
+          const ctx = gsap.context(() => {
+            const contSlide = gsap.timeline({
+              scrollTrigger: {
+                trigger: containerRef.current,
+                start: "top top",
+                end: "7000 top",
+                scrub: true,
+                pin: true,
+                // markers: true
+              }
+            });
+              
+            gsap.set([containerRef.current, boxRef.current, slide1Ref.current, slide2Ref.current, slide3Ref.current, slide4Ref.current, slide5Ref.current, slide6Ref.current],{
+              clearProps:'all'
+            });
+
+            contSlide
+            .fromTo(boxRef.current,{ xPercent:-100, opacity: 0, scale: 1 },{ xPercent: 0, opacity: 1, duration: 10 })
+              .to(boxRef.current, { scale: 0.8, duration: 10 })
+
+            .fromTo(slide1Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 6})
+            .to({},{duration:10})
+            .fromTo(slide1Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
+
+
+            .fromTo(slide2Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 6})
+            .to({},{duration:10})
+            .fromTo(slide2Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
+
+            .fromTo(slide3Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 10})
+            .to({},{duration:10})
+            .fromTo(slide3Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
+
+            .fromTo(slide4Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 6})
+            .to({},{duration:10})
+            .fromTo(slide4Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
+
+            .fromTo(slide5Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 6})
+            .to({},{duration:10})
+            .fromTo(slide5Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
+
+            .fromTo(slide6Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 6})
+            .to({},{duration:10})
+            .fromTo(slide6Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
+
+              .to(boxRef.current,{ scale: 1, duration: 10 },'<')
+              .to(boxRef.current,{ xPercent: -100, opacity: 0, duration: 10 });
+          }, containerRef);
+
+        },
+      }
+    )
+
+      return () => {
+        ScrollTrigger.clearMatchMedia();
+      };
+    }, []);
 
   return (
     <div className="containerDesc" ref={containerRef}>

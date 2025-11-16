@@ -12,13 +12,10 @@ export default function Main() {
     <div className="wrapper">
         <Logo />
         <Desc />
-
         <The />
         <Start />
-
         <End />
-        
-        <Footer />
+        {/* <Footer /> */}
     </div>
   );
 }

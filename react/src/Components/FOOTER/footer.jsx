@@ -9,18 +9,18 @@ export default function Footer() {
       </footer>
 
       <div className="cont-quest-end">
-        <div className="box-group-end-1">
-          <div className="box box1end"></div>
-          <div className="box box2end"></div>
+        <div className="box-group-end-1 mobile">
+          <div className="boxEnd1 box1end"></div>
+          <div className="boxEnd2 box2end"></div>
         </div>
 
-        <div className="box box3end"></div>
-        <div className="box box4end"></div>
-        <div className="box box5end"></div>
+        <div className="boxEnd1 box3end"></div>
+        <div className="boxEnd2 box4end"></div>
+        <div className="boxEnd1 box5end"></div>
 
-        <div className="box-group-end-2">
-          <div className="box box6end"></div>
-          <div className="box box7end"></div>
+        <div className="box-group-end-2 mobile">
+          <div className="boxEnd2 box6end"></div>
+          <div className="boxEnd1 box7end"></div>
         </div>
       </div>
     </div>
