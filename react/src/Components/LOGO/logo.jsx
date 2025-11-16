@@ -51,7 +51,7 @@ export default function Logo(){
           start: "600 center",
           end: "8000 center",
           scrub: true,
-          markers: true,
+          // markers: true,
           pin: true
           }
         });
@@ -98,7 +98,7 @@ export default function Logo(){
           start: "center center",
           end: "5000 center",
           scrub: true,
-          markers: true,
+          // markers: true,
           pin: true
           }
         });
