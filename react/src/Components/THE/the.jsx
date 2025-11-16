@@ -151,7 +151,7 @@ export default function The(){
 
                     .to(item5.current,{opacity:0, duration:5})
                     .to(el.current,{rotationZ:'270deg',opacity:0, duration:6})
-// 
+ 
                 .fromTo(ei.current,{opacity:0,scale:0,yPercent:15,xPercent:100},{scale:1.3,opacity:1,rotationZ:'180deg',color:'red', duration:5})
                     .to({},{duration:10})
                     .to(ei.current,{yPercent:-100,xPercent:0,duration:5})

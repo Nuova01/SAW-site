@@ -1,4 +1,4 @@
-/* .containerEnd{
+.containerEnd{
     width: 100%;
     height: 100vh;
     display: flex;
@@ -107,7 +107,7 @@ color: red;
 
 .box{
     border: 4px solid #ffffff1a;
-} */
+}
 
 
 @media screen and (max-width:767px) {
@@ -137,12 +137,7 @@ color: red;
     height: max-content;
 }
 
-.boxEnd{
-    /* border: 4px solid red; */
-    /* width: 100%; */
-    /* height: 14.285714286vh; */
 
-}
 
 .box1end{
     width: 100%;
