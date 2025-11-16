@@ -1,744 +1,105 @@
-.wrapper-video{
-    position: sticky;
-    object-fit: cover;
-    top: 0;
-    height: 100vh;
-    width: 100%;
+html{
     margin: 0;
+    overflow-x: hidden;
 }
-.card-container-grid{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    z-index: 100;
-}
-.title-container{
-    width: 50%;
-    color: red;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    flex-direction: column;
-    position: sticky;
-}
-.title-button{
-    width: 100%;
-    height: 10vh;
-    position: sticky;
-    top: 0;
-    margin-bottom: 50vh;
-    display: flex;
-    justify-content: start;
-    align-items: start;
-}
-.image-button{
-    width: max-content;
-    height: max-content;
-    background-color: red;
-    font-size: 20px;
-    font-weight: 800;
-    border-radius: 40px;
-    color: black;
-    transition: transform 0.3s ease-in;
-}
-.image-button:hover{
-    color: red;
-    background-color: black;
-    font-weight: 900;
-    font-size: 20px;
-}
-.title-1{
-    width: 50%;
-    height: 40vh;
-    position: sticky;
-    top: 30vh;
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    font-family: "WDXL Lubrifont SC", sans-serif;
-    font-weight: 400;
-    font-style: normal;
 
-}
-.title-2{
-    font-size: 50px;
-    width: 50%;
-    height: 40vh;
-    position: sticky;
-    top: 28vh;
-    margin-bottom: 40vh;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
-    font-style:italic;
-}
-.title-3{
+.containerStart{
     width: 100%;
-    height: 25vh;
-    position: sticky;
-    top: 70vh;
-    text-align: right;
-    margin-top: 20vh;
-    margin-bottom: 15.7vh;
-    font-family: "WDXL Lubrifont SC", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    height: 100%;
+    margin-bottom: 100vh;
+    overflow: hidden;
 }
-.image-container{
-    height: max-content;
-    width: 50%;
-    z-index: 100;
-    position: sticky;
-    top: 0;
-    margin-top: 100vh;
-    padding-bottom: 20vh;
-    flex-direction: column;
+.contBox1{
+    width: 100%;
+    height: 100vh;
+    border: 2px solid red;
+    border-radius:50px ;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
 }
-.border-image{
-    padding: 10px;
-    width: 600px;
-    height: 600px;
-    background-color: #00000099;
-    border-radius: 40px;
-    position: sticky;
-    top: 10vh;
-    margin-top: 20vh;
-    border: 1px solid red;
-}
-.img-1{
-    background-image: url(../../assets/Маньяк.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
+.video-container{
     width: 100%;
     height: 100%;
 }
-.img-2{
-    background-image: url(../../assets/Девушка.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
-    width: 100%;
-    height: 100%; 
-}
-.img-3{
-    background-image: url(../../assets/Бензопила.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
-    width: 100%;
-    height: 100%; 
-}
-.img-4{
-    background-image: url(../../assets/Шторка.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
-    width: 100%;
-    height: 100%; 
-}
-.img-5{
-    background-image: url(../../assets/Упал.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
-    width: 100%;
-    height: 100%; 
-}
-
-
-
-@media screen and (max-width: 1283px) {
-.card-container-grid{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    z-index: 100;
-}
-.title-container{
-    width: 40%;
-}
-.title-button{
-    width: 100%;
-    height: 10vh;
-    position: sticky;
-    top: 0;
-    margin-bottom: 50vh;
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    z-index: 100;
-}
-.image-button{
-    width: max-content;
-    height: max-content;
-    background-color: red;
-    font-size: 20px;
-    font-weight: 800;
-    border-radius: 40px;
-    color: black;
-    transition: transform 0.3s ease-in;
-}
-.image-button:hover{
-    color: red;
-    background-color: black;
-    font-weight: 900;
-}
-.title-1{
-    width: 100%;
-    top: 20vh;
-    display: flex;
-    justify-content: start;
-    margin-bottom: 40vh;
-
-
-}
-.title-2{
-    font-size: 40px;
-    width: 90%;
-    height: 40vh;
-    position: sticky;
-    display: flex;
-    justify-content: start;
-    top: 26vh;
-    margin-bottom: 30vh;
-}
-.title-3{
-    width: 100%;
-    height: 25vh;
-    position: sticky;
-    top: 60vh;
-    display: flex;
-    justify-content: center;
-    text-align: left;
-    margin-top: 20vh;
-    margin-bottom: 14vh;
-}
-}
-
-@media screen and (max-width: 1200px) {
-
-.container{
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
 .wrapper-video{
-    position: sticky;
-    object-fit: cover;
-    top: -6vh;
-    height: 112vh;
-    width: 100%;
-    background-color: black;
-    margin: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+   object-fit: cover; 
+  border-radius: 50px;
+  opacity: 0;
 }
-.title-container{
-    width: 50%;
-    color: red;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: sticky;
-}
-.title-1{
-    width: 100%;
-    top: 20vh;
-    display: flex;
-    justify-content: center;
-margin-bottom: 40vh;
 
-
-}
-.title-2{
+.theStartTitle{
+    width: 100%;
+    height: max-content;
+    color: aliceblue;
     font-size: 30px;
-    width: 50%;
-    height: 40vh;
-    position: sticky;
-    top: 30vh;
-    margin-bottom: 30vh;
-    justify-content: center;
-}
-.title-3{
-    width: 100%;
-    height: 25vh;
-    position: sticky;
-    top: 60vh;
-    display: flex;
-    justify-content: center;
-    text-align: left;
-    margin-top: 20vh;
-    margin-bottom: 14vh;
-}
-.image-container{
-    height: max-content;
-    width: 60%;
-    z-index: 100;
-    position: sticky;
-    top: 0;
-    margin-top: 100vh;
-    padding-bottom: 20vh;
-    flex-direction: column;
+    position: absolute;
     display: flex;
     justify-content: end;
+    padding-right: 2vw;
     align-items: center;
 }
-.border-image{
-    padding: 10px;
-    width: 450px;
-    height: 400px;
-    background-color: #00000099;
-    border-radius: 40px;
-    position: sticky;
-    top: 10vh;
-    margin-top: 20vh;
+
+
+.okak{
+    position: absolute;
+    color: white;
+    opacity: 0;
 }
-.img-1{
-    background-image: url(../../assets/Маньяк.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
+
+@media screen and (max-width:767px){
+    html{
+    margin: 0;
+}
+
+.containerStart{
     width: 100%;
     height: 100%;
 }
-.img-2{
-    background-image: url(../../assets/Девушка.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
+.contBox1{
     width: 100%;
-    height: 100%; 
-}
-.img-3{
-    background-image: url(../../assets/Бензопила.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
-    width: 100%;
-    height: 100%; 
-}
-.img-4{
-    background-image: url(../../assets/Шторка.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
-    width: 100%;
-    height: 100%; 
-}
-.img-5{
-    background-image: url(../../assets/Упал.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
-    width: 100%;
-    height: 100%; 
-}
-}
-
-@media (max-width: 851px) {
-.wrapper-video{
-    width: 100%;
-    height: 110vh;
-}
-.card-container-grid{
+    height: 100vh;
+    border: 2px solid red;
+    border-radius:50px ;
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
-    z-index: 100;
-}  
-.title-container{
-    width: 40%;
+    flex-direction: column;
+    align-items: center;
+
 }
-.title-button{
-    width: 100%;
-    height: 10vh;
-    position: sticky;
-    top: 0;
-    margin-bottom: 50vh;
-    display: flex;
-    justify-content: start;
-    align-items: start;
-}
-.image-button{
-    width: max-content;
-    height: max-content;
-    background-color: red;
-    font-size: 20px;
-    font-weight: 800;
-    border-radius: 40px;
-    color: black;
-    transition: transform 0.3s ease-in;
-}
-.image-button:hover{
-    color: red;
-    background-color: black;
-    font-weight: 900;
-}
-.title-1{
-    justify-content: start;
-}
-.title-2{
-    font-size: 27px;
-}
-.title-3{
-    justify-content: start;
-}
-.border-image{
-    width: 350px;
-    height: 500px;
-}
-.img-1{
-    background-image: url(../../assets/Маньяк.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
+.video-container{
     width: 100%;
     height: 100%;
 }
-.img-2{
-    background-image: url(../../assets/Девушка.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
-    width: 100%;
-    height: 100%; 
-}
-.img-3{
-    background-image: url(../../assets/Бензопила.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
-    width: 100%;
-    height: 100%; 
-}
-.img-4{
-    background-image: url(../../assets/Шторка.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
-    width: 100%;
-    height: 100%; 
-}
-.img-5{
-    background-image: url(../../assets/Упал.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
-    width: 100%;
-    height: 100%; 
-}
-}
-
-@media (max-width: 660px) {
 .wrapper-video{
-    width: 100%;
-    margin: 0;
-    display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+   object-fit: cover; 
+  border-radius: 50px;
+  opacity: 0;
 }
-.wrapper-video-mobile{
-    background-size: cover;
-    object-fit: cover;
-    height: 100vh;
+
+.theStartTitle{
     width: 100%;
-    margin: 0;
-    top: 0;
-    position: sticky;
-    top: 0;
-}
-.card-container-grid{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-.title-container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.title-button{
-    width: 100%;
-    height: 10vh;
-    position: sticky;
-    top: 0;
-    margin-bottom: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    z-index: 100;
-}
-.image-button{
-    width: max-content;
     height: max-content;
-    background-color: red;
-    font-size: 20px;
-    font-weight: 800;
-    border-radius: 40px;
-    color: black;
-    transition: transform 0.3s ease-in;
-}
-.image-button:hover{
-    color: red;
-    background-color: black;
-    font-weight: 900;
-}
-.title-1{
-    font-size: 20px;
-    margin-top: 40vh;
-    width: 100%;
+    color: aliceblue;
+    font-size: 70%;
+    position: absolute;
     display: flex;
     justify-content: center;
-}
-.title-2{
-    font-size: 40px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-.title-3{
-    font-size: 20px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-.image-container{
-    height: max-content;
-    width: 50%;
-    z-index: 100;
-    position: sticky;
-    top: 0;
-    margin-top: 10vh;
-    padding-bottom: 20vh;
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
+    padding-right: 2vw;
     align-items: center;
 }
-.border-image{
-    padding: 10px;
-    width: 300px;
-    height: 500px;
-    margin-top: 20vh;
-}
-.img-1{
-    background-image: url(../../assets/Маньяк.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
-    width: 100%;
-    height: 100%;
-}
-.img-2{
-    background-image: url(../../assets/Девушка.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
-    width: 100%;
-    height: 100%; 
-}
-.img-3{
-    background-image: url(../../assets/Бензопила.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
-    width: 100%;
-    height: 100%; 
-}
-.img-4{
-    background-image: url(../../assets/Шторка.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
-    width: 100%;
-    height: 100%; 
-}
-.img-5{
-    background-image: url(../../assets/Упал.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
-    width: 100%;
-    height: 100%; 
+
+.okak{
+    position: absolute;
+    color: white;
+    opacity: 0;
 }
 }
 
-@media (max-width: 396px) {
-.wrapper-video{
-    background-position: center;
-    background-size: cover;
-    top: 0;
-    height: 150vh;
-    width: 100%;
-    margin: 0;
-}
-.card-container-grid{
-    width: 100%;
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    z-index: 100;
-}
-.title-container{
-    width: 100%;
-    height: auto;
-    color: red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: sticky;
-}
-.title-1{
-    width: 100%;
-    height: 40vh;
-    position: sticky;
-    top: 10vh;
-    margin-top: 40vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: start;
-}
-.title-2{
-    font-size: 28px;
-    width: 50%;
-    height: 40vh;
-    position: sticky;
-    top: 30vh;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    padding-bottom: 10vh;
-}
-.title-3{
-    width: 100%;
-    height: 25vh;
-    position: sticky;
-    top: 90vh;
-    text-align: center;
-    padding-top: 20vh;
-    justify-content: center;
-}
-.image-container{
-    height: max-content;
-    width: 50%;
-    z-index: 100;
-    position: sticky;
-    top: 0;
-    margin-top: 10vh;
-    padding-bottom: 20vh;
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.border-image{
-    padding: 10px;
-    width: 280px;
-    height: 400px;
-    background-color: #00000099;
-    border-radius: 40px;
-    position: sticky;
-    top: 10vh;
-    margin-top: 20vh;
-    border: 1px solid red;
-}
-.img-1{
-    background-image: url(../../assets/Маньяк.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
-    width: 100%;
-    height: 100%;
-}
-.img-2{
-    background-image: url(../../assets/Девушка.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
-    width: 100%;
-    height: 100%; 
-}
-.img-3{
-    background-image: url(../../assets/Бензопила.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
-    width: 100%;
-    height: 100%; 
-}
-.img-4{
-    background-image: url(../../assets/Шторка.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
-    width: 100%;
-    height: 100%; 
-}
-.img-5{
-    background-image: url(../../assets/Упал.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
-    width: 100%;
-    height: 100%; 
-}
-.title-button{
-    width: 100%;
-    height: 10vh;
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    z-index: 100;
-
-}
-.image-button{
-    width: max-content;
-    height: max-content;
-    background-color: red;
-    font-size: 20px;
-    font-weight: 800;
-    border-radius: 40px;
-    color: black;
-    transition: transform 0.3s ease-in;
-}
-.image-button:hover{
-    color: red;
-    background-color: black;
-    font-weight: 900;
-}
-}

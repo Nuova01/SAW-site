@@ -1,10 +1,77 @@
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef, useEffect } from "react";
+gsap.registerPlugin(ScrollTrigger);
+import { gsap } from "gsap";
 import React from 'react';
-import './end.css'
+import "./end.css";
 
-export default function End(){
-    return(
-        <>
-            <div className='container'>
+
+export default function End() {
+  const containerRef = useRef(null);
+  const boxRef = useRef(null);
+  const contMap = useRef(null);
+  const contNum = useRef(null);
+  const contTitle = useRef(null);
+  const contAdre = useRef(null);
+  const contEml = useRef(null);
+  const opa = useRef(null);
+
+
+
+  useEffect(() => {
+      const questSlides2 = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top top",
+          end: "4000 center",
+          scrub: true,
+          pin: true,
+          // markers: true,
+        },
+      });
+
+      questSlides2
+        .fromTo(boxRef.current,{ opacity: 0, width: "10vw", height: "10vh" },
+                              { opacity: 1, width: "90vw", duration: 2 })
+        .to(boxRef.current, { height: "90vh", duration: 2 })
+        .to(boxRef.current, { scale: 0.9, duration: 2 })
+        .fromTo(opa.current,{opacity:0, },{opacity:1,duration: 2 },'<')
+
+        .to(boxRef.current, { scale: 1, duration: 2 })
+        .fromTo(boxRef.current,{ height: "90vh" },{ width: "10vw",  duration: 2 })
+        .to(opa.current,{opacity:0,},'<')
+        .to(boxRef.current, { height: "10vh", opacity: 0, duration: 2 });
+
+  return () => {
+    ScrollTrigger.getAll().forEach((t) => t.kill());
+  };
+  }, []);
+
+  return (
+    
+    <div className="container4" ref={containerRef}>
+      <div className="contBox4 contBox14" ref={boxRef}>
+
+        <div ref={contMap} className="contMap"></div>
+
+              <div ref={opa} className="opa">
+
+                <div ref={contTitle} className='contTitle'><h3>Контакты</h3></div>
+                <div ref={contNum} className='contNum'><h3>+7 (499) 444-21-74</h3></div>
+                <div ref={contEml} className='contEml'><h3>kvest.zdes@gmail.com</h3></div>
+                <div ref={contAdre} className='contAdre'><h3>г. Москва, Андроновское шоссе, 26с1</h3></div>
+
+
+              </div>
+
+
+      </div>
+
+    </div>
+  );
+}
+
+            {/* <div className='container'>
 
                 <div className='footer-container'>
 
@@ -24,7 +91,4 @@ export default function End(){
  
                 </div>
 
-            </div>
-        </>
-    )
-}
+            </div> */}
