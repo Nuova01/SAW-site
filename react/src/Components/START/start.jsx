@@ -1,7 +1,7 @@
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useRef, useEffect, use } from "react";
-gsap.registerPlugin(ScrollTrigger);
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef, useEffect} from "react";
+gsap.registerPlugin(ScrollTrigger);
 import React from 'react';
 import './start.css'
 
@@ -19,18 +19,18 @@ export default function Start(){
 
 
 useEffect(() => { 
-
-    ScrollTrigger.matchMedia({
+    const mm = gsap.matchMedia();
         ////////////////////////
         //////////PC////////////
         ////////////////////////
-        '(min-width:1024px)': function() {
+    mm.add("(min-width: 1024px)", () => {
+        const ctx = gsap.context(() => {
 
             const start = gsap.timeline({
                 scrollTrigger: {
                     trigger: containerStart.current,
                     start: "top top",
-                    end: "6000 top",
+                    end: "+=6000 top",
                     scrub: true,
                     pin: true,
                     // markers: true
@@ -55,35 +55,26 @@ useEffect(() => {
             .to(contBox1.current,{border:'none'},'<')
             .to({},{})
 
-            
-            },
+    });
+
+    return () => ctx.revert();
+  });
 
             ///////////////////////////
             ////////MOBILE/////////////
             ///////////////////////////
-            '(max-width:767px)': function() {
+              mm.add("(max-width: 767px)", () => {
+    const ctx = gsap.context(() => {
 
             const start = gsap.timeline({
                 scrollTrigger: {
                     trigger: containerStart.current,
                     start: "top top",
-                    end: "8000 top",
+                    end: "+=6000 top",
                     scrub: true,
                     pin: true,
                     // markers: true
                 }
-            });
-
-
-            gsap.set([containerStart.current, 
-                title.current, 
-                containerStart.current, 
-                item2.current, 
-                item3.current, 
-                item5.current, 
-                video.current, 
-                contBox1.current],{
-                clearProps:'all'
             });
 
 
@@ -105,14 +96,14 @@ useEffect(() => {
 
                 
             },
-        }
+        
     )
 
+    return () => ctx.revert();
+  });
 
-        return () => {
-            ScrollTrigger.clearMatchMedia();
-        };
-    }, []);
+  return () => mm.revert(); // очищает группы медиазапросов
+}, []);
 
 
 

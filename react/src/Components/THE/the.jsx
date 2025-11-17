@@ -1,7 +1,7 @@
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
-import { gsap } from "gsap";
 import React from 'react';
 import './the.css'
 
@@ -23,11 +23,12 @@ export default function The(){
 
 
     useEffect(() => { 
-        ScrollTrigger.matchMedia({
-            ////////////////////////
-            //////////PC////////////
-            ////////////////////////
-            '(min-width:1024px)': function() {
+    const mm = gsap.matchMedia();
+        ////////////////////////
+        //////////PC////////////
+        ////////////////////////
+    mm.add("(min-width: 1024px)", () => {
+        const ctx = gsap.context(() => {
 
                 const tl = gsap.timeline({
                     scrollTrigger: {
@@ -84,12 +85,16 @@ export default function The(){
                     .to([gear1.current,gear2.current], {opacity:1, duration:10},'<')
                     .to(item7.current,{textShadow:'5px 5px 5px red', duration:10},)
                     .to({},{duration:5})
-            },
+    });
+
+    return () => ctx.revert();
+  });
 
             ///////////////////////////
             ////////MOBILE/////////////
             ///////////////////////////
-            '(max-width:767px)': function() {
+              mm.add("(max-width: 767px)", () => {
+    const ctx = gsap.context(() => {
 
             const tl = gsap.timeline({
                 scrollTrigger: {
@@ -100,22 +105,6 @@ export default function The(){
                     pin: true,
                     // markers: true
                 }
-            });
-            gsap.set([containerThe.current, 
-                title.current, 
-                item1.current, 
-                item2img.current, 
-                item3.current, 
-                item5.current, 
-                item7.current, 
-                ynika.current, 
-                el.current, 
-                nie.current, 
-                ei.current, 
-                gear1.current, 
-                gear2.current, 
-                block.current],{
-              clearProps:'all'
             });
 
             tl
@@ -163,14 +152,14 @@ export default function The(){
                     .to({},{duration:5})
                 
             },
-        }
+        
     )
 
+    return () => ctx.revert();
+  });
 
-        return () => {
-            ScrollTrigger.clearMatchMedia();
-        };
-    }, []);
+  return () => mm.revert(); // очищает группы медиазапросов
+}, []);
 
 
     return(

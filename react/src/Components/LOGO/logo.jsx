@@ -1,8 +1,8 @@
+import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 gsap.registerPlugin(ScrollTrigger);
 import React from 'react';
-import gsap from 'gsap';
 import './logo.css'
 
 
@@ -30,11 +30,12 @@ export default function Logo(){
 
 
   useEffect(() => {
-    ScrollTrigger.matchMedia({
-      ////////////////////////
-      //////////PC////////////
-      ////////////////////////
-      '(min-width:1024px)': function() {
+    const mm = gsap.matchMedia();
+        ////////////////////////
+        //////////PC////////////
+        ////////////////////////
+    mm.add("(min-width: 1024px)", () => {
+        const ctx = gsap.context(() => {
 
         const logoTl = gsap.timeline({
           scrollTrigger: {
@@ -49,7 +50,7 @@ export default function Logo(){
           scrollTrigger: {
           trigger: containerRef.current,
           start: "600 center",
-          end: "7000 center",
+          end: "+=4000 center",
           scrub: true,
           // markers: true,
           pin: true
@@ -77,11 +78,16 @@ export default function Logo(){
         .to(box4Ref.current,{y:400,scale:1.3,opacity:0,})
         .to(box4Ref.current,{y:600,});
   
-    },
-    ///////////////////////////
-    ////////MOBILE/////////////
-    ///////////////////////////
-      '(max-width:767px)': function() {
+    });
+
+    return () => ctx.revert();
+  });
+
+            ///////////////////////////
+            ////////MOBILE/////////////
+            ///////////////////////////
+              mm.add("(max-width: 767px)", () => {
+    const ctx = gsap.context(() => {
 
         const logoTl = gsap.timeline({
           scrollTrigger: {
@@ -96,15 +102,11 @@ export default function Logo(){
           scrollTrigger: {
           trigger: containerRef.current,
           start: "center center",
-          end: "7000 center",
+          end: "+=4000 center",
           scrub: true,
           // markers: true,
           pin: true
           }
-        });
-
-        gsap.set([logoRef.current,contLogo.current,containerRef.current,contQuestRef.current,box1Ref.current,box2Ref.current,box3Ref.current,box4Ref.current,box5Ref.current,box6Ref.current,box7Ref.current,contBox4pRef.current,boxGroup1Ref.current,boxGroup2Ref.current,box4p1Ref.current,box4p2Ref.current,box4h1Ref.current],{
-          clearProps:'all'
         });
 
 
@@ -143,13 +145,15 @@ export default function Logo(){
 
 
 
-    })
+    )
 
 
-  return () => {
-    ScrollTrigger.clearMatchMedia();
-  };
+    return () => ctx.revert();
+  });
+
+  return () => mm.revert(); // очищает группы медиазапросов
 }, []);
+
 
       
 
@@ -196,4 +200,4 @@ export default function Logo(){
       </div>
     </>
   );
-}
+  }
