@@ -49,7 +49,7 @@ export default function Logo(){
           scrollTrigger: {
           trigger: containerRef.current,
           start: "600 center",
-          end: "8000 center",
+          end: "7000 center",
           scrub: true,
           // markers: true,
           pin: true
@@ -96,7 +96,7 @@ export default function Logo(){
           scrollTrigger: {
           trigger: containerRef.current,
           start: "center center",
-          end: "5000 center",
+          end: "7000 center",
           scrub: true,
           // markers: true,
           pin: true
