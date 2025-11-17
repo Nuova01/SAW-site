@@ -95,7 +95,7 @@ export default function The(){
                 scrollTrigger: {
                     trigger: containerThe.current,
                     start: "top top",
-                    end: "6000 top",
+                    end: "8000 top",
                     scrub: true,
                     pin: true,
                     // markers: true
@@ -193,9 +193,9 @@ export default function The(){
 
                     <div ref={ei} className='theItem6'><h3>И</h3></div>
                     <div ref={item7} className='theItem7'>
-                        <div ref={gear2} className="gear gear2"></div> {/* <<< добавлено */}
+                        <div ref={gear2} className="gear gear2"></div> 
                         <div className='itemMehText'><h3>МЕХАНИЗМЫ</h3></div>
-                        <div ref={gear1} className="gear gear1"></div> {/* <<< добавлено */}
+                        <div ref={gear1} className="gear gear1"></div>
                     </div>
                 </div>
 

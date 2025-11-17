@@ -29,7 +29,7 @@ export default function Desc(){
               scrollTrigger: {
                 trigger: containerRef.current,
                 start: "top top",
-                end: "7000 top",
+                end: "5000 top",
                 scrub: true,
                 pin: true,
                 // markers: true
@@ -71,7 +71,7 @@ export default function Desc(){
               scrollTrigger: {
                 trigger: containerRef.current,
                 start: "top top",
-                end: "7000 top",
+                end: "5000 top",
                 scrub: true,
                 pin: true,
                 // markers: true
