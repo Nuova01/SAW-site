@@ -77,14 +77,14 @@ export default function The(){
                         .to(el.current,{rotationZ:'270deg',opacity:0, duration:6})
     // 
                     .fromTo(ei.current,{opacity:0,scale:0,yPercent:15,xPercent:100},{scale:2,opacity:1,rotationZ:'180deg',color:'red', duration:5})
-                        .to({},{duration:10})
+                        .to({},{duration:5})
                         .to(ei.current,{yPercent:-100,xPercent:0,duration:5})
     
-                    .fromTo(item7.current,{yPercent:100,rotationZ:'-90deg', opacity:0, color:'white', scale:1},{yPercent:200,xPercent:20,scale:2,opacity:1,textShadow:'2px 2px 4px white',duration:6},)
-                        .fromTo(item7.current,{rotationZ:'-90deg', scale:2, duration:10},{xPercent:0,rotationZ:'0deg', scale:5, duration:10})
-                        .to([gear1.current,gear2.current], {opacity:1, duration:10},'<')
-                        .to(item7.current,{textShadow:'5px 5px 5px red', duration:10},)
-                        .to({},{duration:5})
+                    .fromTo(item7.current,{yPercent:100,rotationZ:'-90deg', opacity:0, color:'white', scale:1},{yPercent:200,xPercent:20,scale:2,opacity:1,textShadow:'2px 2px 4px white',duration:5},)
+                        .fromTo(item7.current,{rotationZ:'-90deg', scale:2, duration:5},{xPercent:0,rotationZ:'0deg', scale:5, duration:5})
+                        .to([gear1.current,gear2.current], {opacity:1, duration:5},'<')
+                        .to(item7.current,{textShadow:'5px 5px 5px red', duration:5},)
+                        .to({},{duration:3})
         });
 
         return () => ctx.revert();
@@ -108,16 +108,16 @@ export default function The(){
                 });
 
                 tl
-                .fromTo(title.current,{opacity:0,scale:1,yPercent:-200, duration:5}, {yPercent:0,opacity:1,scale:1, duration:10})
+                .fromTo(title.current,{opacity:0,scale:1,yPercent:-200, duration:5}, {yPercent:0,opacity:1,scale:1, duration:5})
 
 
-                .fromTo(item1.current, {scale:0.6,opacity:0,duration:10,},{ yPercent:0, scale:1.8,opacity:1,color:'white', zIndex:100, textShadow:'2px 2px 3px grey', duration:10})
-                .fromTo(item2img.current,{scale:0.6,opacity:0,duration:10,},{ scale:0.8,opacity:1, duration:10} )
-                .fromTo(item3.current,{opacity:0, scale:1,duration:10,},{opacity:1,scale:1.8, color:'white',zIndex:100, textShadow:'2px 2px 3px grey', duration:10})
+                .fromTo(item1.current, {scale:0.6,opacity:0,duration:5,},{ yPercent:0, scale:1.8,opacity:1,color:'white', zIndex:100, textShadow:'2px 2px 3px grey', duration:5})
+                .fromTo(item2img.current,{scale:0.6,opacity:0,duration:5,},{ scale:0.8,opacity:1, duration:5} )
+                .fromTo(item3.current,{opacity:0, scale:1,duration:5,},{opacity:1,scale:1.8, color:'white',zIndex:100, textShadow:'2px 2px 3px grey', duration:5})
 
-                    .to(item1.current,{opacity:0, duration:10})
-                    .to(item2img.current,{opacity:0, duration:10})
-                    .to(item3.current,{opacity:0, duration:10})
+                    .to(item1.current,{opacity:0, duration:5})
+                    .to(item2img.current,{opacity:0, duration:5})
+                    .to(item3.current,{opacity:0, duration:5})
 
                 .fromTo(ynika.current,{opacity:0,scale:1.3,yPercent:100,xPercent:22},{opacity:1,color:'#222', duration:'5'})
                 .fromTo(el.current,{opacity:0,scale:1.3,yPercent:15,xPercent:100},{opacity:1,color:'black', duration:5},'<')
@@ -125,7 +125,7 @@ export default function The(){
                 .fromTo(el.current,{color:'black',},{color:'red', duration:5})
 
                     .to(el.current,{rotationZ:'0deg', duration:5})
-                .fromTo(item5.current,{scale:1.3,yPercent:15, xPercent:0, duration:20},{opacity:1,xPercent:0,color:'#222', duration:20})
+                .fromTo(item5.current,{scale:1.3,yPercent:15, xPercent:0, duration:5},{opacity:1,xPercent:0,color:'#222', duration:5})
 
 
                     .to(nie.current,{borderTop:'1px solid red', duration:5})
@@ -142,13 +142,13 @@ export default function The(){
                     .to(el.current,{rotationZ:'270deg',opacity:0, duration:6})
 
                 .fromTo(ei.current,{opacity:0,scale:0,yPercent:15,xPercent:100},{scale:1.3,opacity:1,rotationZ:'180deg',color:'red', duration:5})
-                    .to({},{duration:10})
+                    .to({},{duration:5})
                     .to(ei.current,{yPercent:-100,xPercent:0,duration:5})
 
                 .fromTo(item7.current,{yPercent:100,rotationZ:'-90deg', opacity:0, color:'white', scale:1},{yPercent:200,scale:1.4,opacity:1,textShadow:'2px 2px 4px white',duration:6},)
-                    .fromTo(item7.current,{rotationZ:'-90deg', scale:1.4, duration:10},{rotationZ:'0deg', scale:1, duration:10})
-                    .to([gear1.current,gear2.current], {opacity:1, duration:10},'<')
-                    .to(item7.current,{textShadow:'5px 5px 5px red', duration:10},)
+                    .fromTo(item7.current,{rotationZ:'-90deg', scale:1.4, duration:5},{rotationZ:'0deg', scale:1, duration:5})
+                    .to([gear1.current,gear2.current], {opacity:1, duration:5},'<')
+                    .to(item7.current,{textShadow:'5px 5px 5px red', duration:5},)
                     .to({},{duration:5})
             });
 
@@ -178,7 +178,7 @@ export default function The(){
                     </div>
 
                     <div ref={ei} className='theItem6'><h3>И</h3></div>
-                    
+
                     <div ref={item7} className='theItem7'>
                         <div ref={gear2} className="gear gear2"></div> 
                         <div className='itemMehText'><h3>МЕХАНИЗМЫ</h3></div>
