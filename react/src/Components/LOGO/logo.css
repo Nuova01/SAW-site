@@ -83,7 +83,7 @@ header {
     align-items: center;
 }
 .cont-quest{
-    /* position: absolute; */
+    position: absolute;
     top: 20ch;
     width: 100%;
     display: flex;
@@ -252,12 +252,13 @@ header {
 }
 .cont-quest{
     padding-top: 0vh;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0;
+    position:sticky;
 }
 .box-group-1, .box-group-2{
     width: 100%;
