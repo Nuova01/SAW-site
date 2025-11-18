@@ -5,13 +5,120 @@
     justify-content: center;
     align-items: center;
 }
-.contBox14{
+.containerBackImg{
     width: 100%;
     height: 100%;
-
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
+  opacity: 0;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: fade 30s infinite;
+}
+
+.s1 { background-image: url("../../assets/Маньяк.png"); animation-delay: 0s; }
+.s2 { background-image: url("../../assets/Бензопила.jpg"); animation-delay: 5s; }
+.s3 { background-image: url("../../assets/Девушка.png"); animation-delay: 10s; }
+.s4 { background-image: url("../../assets/Стул.png"); animation-delay: 15s; }
+.s5 { background-image: url("../../assets/Упал.png"); animation-delay: 20s; }
+
+@keyframes fade {
+  0%   { opacity: 0; }
+  12%  { opacity: 1; } 
+  20%  { opacity: 1; } 
+  100% { opacity: 0; }
+}
+.containerBack{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    filter: blur(6px);
+}
+.contBox14{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.boxBottom{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    background-color: black;
+    color: red;
+    font-size: 120%;
+    width: 100%;
+    height: 100%;
+    display: none;
+    opacity: 0;
+    border-radius: 50px;
+    animation: button infinite 4s alternate ease-in-out;
+    text-decoration: none;
+}
+.boxBottom:hover{
+    background-color: #00000099;
+    color: white;
+    filter: drop-shadow(0 0 5em #61dafbaa);
+    box-shadow: 0px 0px 10px white;
+    border-color: black;
+    transition-duration: 1s;
+    animation: buttonHov 2s alternate ease both;
+    text-decoration: none; 
+}
+.boxBotoom:visited {
+  color: inherit;
+  text-decoration: none;      
+}
+.boxBottom:active {
+  text-decoration: none;
+}
+@keyframes buttonHov {
+    to{
+        transform: scale(1.1);
+    }
+}
+@keyframes button {
+    from{
+        transform: rotate(0deg);
+        color: red;
+    }
+    25%{
+        transform: rotate(5deg);
+        box-shadow: 4px -2px 5px white;
+        color: white;
+    }
+    75%{
+        transform: rotate(-5deg);
+        box-shadow: -4px 2px 5px white;
+        color: white;
+    }
+    to{
+        transform: rotate(0deg);
+        color: red;
+    }
 }
 .contMap{
     width: 100%;
@@ -22,20 +129,19 @@
     background-size: cover;
     object-fit: cover;
     border-radius: 50px;
+    position: absolute;
 }
-
 .opa{
     background-color: #00000099;
     border-radius: 50px;
     padding: 1rem;
     width: 50%;
-    height: 50%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     flex-direction: column;
-    position: absolute;
     color: white;
     opacity: 1;
     overflow: hidden;
@@ -50,20 +156,129 @@
 }
 
 @media screen and (max-width:767px) {
-    .container4{
+ .container4{
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.contBox14{
+.containerBackImg{
     width: 100%;
     height: 100%;
-
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
+  opacity: 0;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: fade 30s infinite;
+}
+
+.s1 { background-image: url("../../assets/Маньяк.png"); animation-delay: 0s; }
+.s2 { background-image: url("../../assets/Бензопила.jpg"); animation-delay: 5s; }
+.s3 { background-image: url("../../assets/Девушка.png"); animation-delay: 10s; }
+.s4 { background-image: url("../../assets/Стул.png"); animation-delay: 15s; }
+.s5 { background-image: url("../../assets/Упал.png"); animation-delay: 20s; }
+
+@keyframes fade {
+  0%   { opacity: 0; }
+  12%  { opacity: 1; } 
+  20%  { opacity: 1; }  
+  100% { opacity: 0; }
+}
+
+.containerBack{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    filter: blur(6px);
+}
+
+.contBox14{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.boxBottom{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    background-color: black;
+    color: red;
+    font-size: 100%;
+    width: 100%;
+    height: 100%;
+    display: none;
+    opacity: 0;
+    border-radius: 50px;
+    animation: button infinite 4s alternate ease-in-out;
+    text-decoration: none;    
+}
+
+.boxBottom:hover{
+    background-color: #00000099;
+    color: white;
+    filter: drop-shadow(0 0 5em #61dafbaa);
+    box-shadow: 0px 0px 10px white;
+    border-color: black;
+    transition-duration: 1s;
+    animation: buttonHov 2s alternate ease both;
+     text-decoration: none; 
+}
+.boxBotoom:visited {
+  color: inherit;
+  text-decoration: none;      
+}
+.boxBottom:active {
+  text-decoration: none;
+}
+@keyframes buttonHov {
+    to{
+        transform: scale(1.1);
+    }
+}
+@keyframes button {
+    from{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(5deg);
+        box-shadow: 2px -2px 5px white;
+    }
+    75%{
+        transform: rotate(-5deg);
+        box-shadow: -2px 2px 5px white;
+    }
+    to{
+        transform: rotate(0deg);
+    }
 }
 .contMap{
     width: 100%;
@@ -74,20 +289,20 @@
     background-size: cover;
     object-fit: cover;
     border-radius: 50px;
+    position: absolute;
 }
 
 .opa{
     background-color: #00000099;
     border-radius: 50px;
     padding: 1rem;
-    width: 70%;
+    width: 100%;
     height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     flex-direction: column;
-    position: absolute;
     color: white;
     opacity: 1;
     overflow: hidden;
@@ -99,6 +314,9 @@
     border: 5px solid red;
     background-color: rgb(36, 1, 1);
     border-radius:50px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-    
 }
