@@ -126,7 +126,7 @@ export default function Logo(){
           const tl = gsap.timeline({
             scrollTrigger: {
             trigger: containerRef.current,
-            start: "center center",
+            start: "top top",
             end: "+=3000 center",
             scrub: true,
             // markers: true,
@@ -177,12 +177,12 @@ export default function Logo(){
           .fromTo(box1Ref.current,{opacity:0,scale:0.7},{opacity:1, scale:1})
           .fromTo(containerRef.current,{},{duration:3})
 
-            .to(box7Ref.current,{opacity:0,scale:0.7, duration:2,})
-            .to(box1Ref.current,{opacity:0,scale:0.7, duration:2,},'<')
-            .to(box6Ref.current,{opacity:0,scale:0.7, duration:2,})
-            .to(box2Ref.current,{opacity:0,scale:0.7, duration:2,},'<')
-            .to(box5Ref.current,{opacity:0,scale:0.7, duration:2,})
-            .to(box3Ref.current,{opacity:0,scale:0.7, duration:2,},'<')
+            .to(box7Ref.current,{opacity:0,scale:0.7, duration:1,})
+            .to(box1Ref.current,{opacity:0,scale:0.7, duration:1,},'<')
+            .to(box6Ref.current,{opacity:0,scale:0.7, duration:1,})
+            .to(box2Ref.current,{opacity:0,scale:0.7, duration:1,},'<')
+            .to(box5Ref.current,{opacity:0,scale:0.7, duration:1,})
+            .to(box3Ref.current,{opacity:0,scale:0.7, duration:1,},'<')
             .to([box7Ref.current,box1Ref.current,box6Ref.current,box2Ref.current,box5Ref.current,box3Ref.current],{height:'0vh',duration:2,})
 
           .fromTo(box4Ref.current,{},{height:'100%', borderRadius:'50px',duration:2},'<')
@@ -191,7 +191,7 @@ export default function Logo(){
           .fromTo(box4p2Ref.current,{opacity:0, y:'300%'},{opacity:1, y:0,})
           .fromTo(box4h1Ref.current,{opacity:0, scale:0.7, color:'#00000099'},{opacity:1, scale:2, textShadow:'3px 3px 6px red'})
 
-          .fromTo(containerRef.current,{},{duration:3})
+          .fromTo(containerRef.current,{},{duration:1})
                 
         });
 
