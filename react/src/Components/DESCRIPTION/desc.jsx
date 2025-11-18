@@ -29,7 +29,7 @@ export default function Desc(){
               scrollTrigger: {
                 trigger: containerRef.current,
                 start: "top top",
-                end: "+=5000 top",
+                end: "+=3000 top",
                 scrub: true,
                 pin: true,
                 // markers: true
@@ -62,65 +62,63 @@ export default function Desc(){
     });
 
     return () => ctx.revert();
-  });
+    });
 
             ///////////////////////////
             ////////MOBILE/////////////
             ///////////////////////////
-              mm.add("(max-width: 767px)", () => {
-    const ctx = gsap.context(() => {
-            const contSlide = gsap.timeline({
-              scrollTrigger: {
-                trigger: containerRef.current,
-                start: "top top",
-                end: "+=5000 top",
-                scrub: true,
-                pin: true,
-                // markers: true
-              }
-            });
+    mm.add("(max-width: 767px)", () => {
+      const ctx = gsap.context(() => {
+        const contSlide = gsap.timeline({
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top top",
+            end: "+=3000 top",
+            scrub: true,
+            pin: true,
+            // markers: true
+          }
+        });
 
-            contSlide
-            .fromTo(boxRef.current,{ xPercent:-100, opacity: 0, scale: 1 },{ xPercent: 0, opacity: 1, duration: 10 })
-              .to(boxRef.current, { scale: 0.8, duration: 10 })
+        contSlide
+        .fromTo(boxRef.current,{ xPercent:-100, opacity: 0, scale: 1 },{ xPercent: 0, opacity: 1, duration: 10 })
+          .to(boxRef.current, { scale: 0.8, duration: 10 })
 
-            .fromTo(slide1Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 6})
-            .to({},{duration:10})
-            .fromTo(slide1Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
+        .fromTo(slide1Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 6})
+        .to({},{duration:10})
+        .fromTo(slide1Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
 
 
-            .fromTo(slide2Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 6})
-            .to({},{duration:10})
-            .fromTo(slide2Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
+        .fromTo(slide2Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 6})
+        .to({},{duration:10})
+        .fromTo(slide2Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
 
-            .fromTo(slide3Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 10})
-            .to({},{duration:10})
-            .fromTo(slide3Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
+        .fromTo(slide3Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 10})
+        .to({},{duration:10})
+        .fromTo(slide3Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
 
-            .fromTo(slide4Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 6})
-            .to({},{duration:10})
-            .fromTo(slide4Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
+        .fromTo(slide4Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 6})
+        .to({},{duration:10})
+        .fromTo(slide4Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
 
-            .fromTo(slide5Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 6})
-            .to({},{duration:10})
-            .fromTo(slide5Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
+        .fromTo(slide5Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 6})
+        .to({},{duration:10})
+        .fromTo(slide5Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
 
-            .fromTo(slide6Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 6})
-            .to({},{duration:10})
-            .fromTo(slide6Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
+        .fromTo(slide6Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 6})
+        .to({},{duration:10})
+        .fromTo(slide6Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
 
-              .to(boxRef.current,{ scale: 1, duration: 10 },'<')
-              .to(boxRef.current,{ xPercent: -100, opacity: 0, duration: 10 });
+          .to(boxRef.current,{ scale: 1, duration: 10 },'<')
+          .to(boxRef.current,{ xPercent: -100, opacity: 0, duration: 10 });
 
-            },
-        
-    )
+      });
 
-    return () => ctx.revert();
-  });
+      return () => ctx.revert();
+    });
 
-  return () => mm.revert(); // очищает группы медиазапросов
-}, []);
+      return () => mm.revert(); // очищает группы медиазапросов
+    }, []);
 
   return (
     <div className="containerDesc" ref={containerRef}>
