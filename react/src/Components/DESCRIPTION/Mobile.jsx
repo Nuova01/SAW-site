@@ -1,12 +1,12 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useRef, useEffect } from "react";
+import { useRef, useLayoutEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
 import React from 'react';
-import "./desc.css";
+import "./style.css";
 
 
-export default function Desc(){
+export default function Desktop(){
     const containerRef = useRef(null);
     const boxRef = useRef(null);
     const slide1Ref = useRef(null);
@@ -17,58 +17,9 @@ export default function Desc(){
     const slide6Ref = useRef(null);
 
     
-    useEffect(() => {
-    const mm = gsap.matchMedia();
-        ////////////////////////
-        //////////PC////////////
-        ////////////////////////
-    mm.add("(min-width: 1024px)", () => {
-        const ctx = gsap.context(() => {
-
-            const contSlide = gsap.timeline({
-              scrollTrigger: {
-                trigger: containerRef.current,
-                start: "top top",
-                end: "+=3000 top",
-                scrub: true,
-                pin: true,
-                // markers: true
-              }
-            });
-
-            contSlide
-            .fromTo(boxRef.current,{ x: -800, opacity: 0, scale: 1 },{ x: 0, opacity: 1, duration: 10 })
-              .to(boxRef.current, { scale: 0.8, duration: 10 })
-              
-            .fromTo(slide1Ref.current,{opacity:0, scale:0.5, duration: 10},{opacity:1, scale:1, xPercent:-9,yPercent:-30, duration: 10})
-            .fromTo(slide2Ref.current,{opacity:0, scale:0.5, duration: 10},{opacity:1, scale:1, xPercent:130,yPercent:250, duration: 10})
-            .fromTo(slide3Ref.current,{opacity:0, scale:0.5, duration: 10},{opacity:1, scale:1, xPercent:-3,yPercent:60, duration: 10})
-            .fromTo(slide4Ref.current,{opacity:0, scale:0.5, duration: 10},{opacity:1, scale:1, xPercent:160,yPercent:-200, duration: 10})
-            .fromTo(slide5Ref.current,{opacity:0, scale:0.5, duration: 10},{opacity:1, scale:1, xPercent:160,yPercent:-250, duration: 10})
-            .fromTo(slide6Ref.current,{opacity:0, scale:0.5, duration: 10},{opacity:1, scale:1, xPercent:30,yPercent:-360, duration: 10})
-
-            .fromTo(containerRef.current,{},{duration:10})
-            
-              .to(slide1Ref.current,{scale:0.5,opacity:0, duration: 10},)
-              .to(slide2Ref.current,{scale:0.5,opacity:0, duration: 10},'<')
-              .to(slide3Ref.current,{scale:0.5,opacity:0, duration: 10},'<')
-              .to(slide4Ref.current,{scale:0.5,opacity:0, duration: 10},'<')
-              .to(slide5Ref.current,{scale:0.5,opacity:0, duration: 10},'<')
-              .to(slide6Ref.current,{scale:0.5,opacity:0, duration: 10},'<')
-
-              .to(boxRef.current,{ scale: 1, duration: 10 },'<')
-              .to(boxRef.current,{ x: -800, opacity: 0, duration: 10 });
-
-    });
-
-    return () => ctx.revert();
-    });
-
-            ///////////////////////////
-            ////////MOBILE/////////////
-            ///////////////////////////
-    mm.add("(max-width: 767px)", () => {
-      const ctx = gsap.context(() => {
+    useLayoutEffect(() => {
+            const ctx = gsap.context(() => {
+        
         const contSlide = gsap.timeline({
           scrollTrigger: {
             trigger: containerRef.current,
@@ -77,7 +28,7 @@ export default function Desc(){
             scrub: true,
             pin: true,
             // markers: true
-          }
+            }
         });
 
         contSlide
@@ -85,12 +36,12 @@ export default function Desc(){
           .to(boxRef.current, { scale: 0.8, duration: 10 })
 
         .fromTo(slide1Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 6})
-        .to({},{duration:10})
+            .to({},{duration:10})
         .fromTo(slide1Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
 
 
         .fromTo(slide2Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 6})
-        .to({},{duration:10})
+            .to({},{duration:10})
         .fromTo(slide2Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
 
         .fromTo(slide3Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 10})
@@ -98,29 +49,26 @@ export default function Desc(){
         .fromTo(slide3Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
 
         .fromTo(slide4Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 6})
-        .to({},{duration:10})
+            .to({},{duration:10})
         .fromTo(slide4Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
 
         .fromTo(slide5Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 6})
-        .to({},{duration:10})
+            .to({},{duration:10})
         .fromTo(slide5Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
 
         .fromTo(slide6Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 6})
-        .to({},{duration:10})
+            .to({},{duration:10})
         .fromTo(slide6Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
 
           .to(boxRef.current,{ scale: 1, duration: 10 },'<')
           .to(boxRef.current,{ xPercent: -100, opacity: 0, duration: 10 });
 
-      });
+    }, containerRef); 
 
-      return () => ctx.revert();
-    });
+    return () => ctx.revert(); 
+  }, []);
 
-      return () => mm.revert(); // очищает группы медиазапросов
-    }, []);
-
-  return (
+ return (
     <div className="containerDesc" ref={containerRef}>
       <div className="contBox2" ref={boxRef}>
         

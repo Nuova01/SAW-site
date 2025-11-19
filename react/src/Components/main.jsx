@@ -1,20 +1,19 @@
 import React from 'react';
 import './main.css';
-import Start from './START/start';
-import Desc from './DESCRIPTION/desc';
-import End from './END/end';
-import Logo from './LOGO/logo';
-import Footer from './FOOTER/footer';
-import The from './THE/the';
+import Video from './VIDEO';
+import LogoStart from './LOGO';
+import End from './END';
+import Description from './DESCRIPTION';
+import Features from './FEATURES';
 
 export default function Main() {
   return (
     <div className="wrapper">
-        <Logo />
-        <Desc />
-        <The />
-        <Start />
-        <End />
+        <LogoStart /> 
+        <Description />
+        <Features />
+        <Video/>
+        <End/>
         {/* <Footer /> */}
     </div>
   );
