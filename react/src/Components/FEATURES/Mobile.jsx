@@ -1,11 +1,11 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useRef, useEffect } from "react";
+import { useRef, useLayoutEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
 import React from 'react';
-import './the.css'
+import './style.css'
 
-export default function The(){ 
+export default function Mobile(){ 
     const containerThe = useRef(null);
     const title = useRef(null);
     const item1 = useRef(null);
@@ -22,92 +22,22 @@ export default function The(){
     const block = useRef(null); 
 
 
-    useEffect(() => { 
-    const mm = gsap.matchMedia();
-        ////////////////////////
-        //////////PC////////////
-        ////////////////////////
-        mm.add("(min-width: 1024px)", () => {
-            const ctx = gsap.context(() => {
+useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
 
-                    const tl = gsap.timeline({
-                        scrollTrigger: {
-                            trigger: containerThe.current,
-                            start: "top top",
-                            end: "+=4000 top",
-                            scrub: true,
-                            pin: true,
-                            // markers: true
-                        }
-                    });
-
-
-                    tl
-                    .fromTo(title.current,{opacity:0,scale:1,yPercent:-200}, {yPercent:0,opacity:1,scale:1, duration:2})
-
-
-                    .fromTo(item1.current, {scale:0.6,opacity:0,duration:10,},{ yPercent:100,xPercent:-20, scale:3,opacity:1,color:'white', zIndex:100, textShadow:'2px 2px 3px grey', duration:10})
-                    .fromTo(item2img.current,{scale:0.6,opacity:0,duration:10,},{ scale:2,opacity:1, duration:10} )
-                    .fromTo(item3.current,{opacity:0, scale:1,duration:10,},{opacity:1,scale:3, color:'white',zIndex:100, textShadow:'2px 2px 3px grey', duration:10})
-
-                        .to(item1.current,{opacity:0, duration:10})
-                        .to(item2img.current,{opacity:0, duration:10})
-                        .to(item3.current,{opacity:0, duration:10})
-
-                    .fromTo(ynika.current,{opacity:0,scale:2,yPercent:140,xPercent:22},{opacity:1,color:'#222', duration:'5'})
-                    .fromTo(el.current,{opacity:0,scale:2,yPercent:10,xPercent:100},{opacity:1,color:'#222', duration:5},'<')
-                    .fromTo(nie.current,{opacity:0,scale:2,yPercent:-110,xPercent:24},{opacity:1,color:'#222', duration:5},'<')
-                    .fromTo(el.current,{color:'#222',},{color:'red', duration:5})
-
-                        .to(el.current,{rotationZ:'0deg', duration:5})
-                    .fromTo(item5.current,{scale:2,yPercent:5, xPercent:10, duration:20},{opacity:1,xPercent:-6,color:'#222', duration:20})
-
-
-                        .to(nie.current,{borderTop:'1px solid red', duration:5})
-                        .to(ynika.current,{borderBottom:'1px solid red', duration:5})
-                        .to(item5.current,{textShadow:'2px 2px 4px red', duration:5},'<')
-                        .to(ynika.current,{textShadow:'2px 2px 4px white', duration:5},'<')
-                        .to(nie.current,{textShadow:'2px 2px 4px white', duration:5},'<')
-                        .to({},{duration:5})
-                        .to(ynika.current,{opacity:0, duration:5})
-                        .to(nie.current,{opacity:0, duration:5},'<')
-                        .to({},{duration:3})
-
-                        .to(item5.current,{opacity:0, duration:5})
-                        .to(el.current,{rotationZ:'270deg',opacity:0, duration:6})
-    // 
-                    .fromTo(ei.current,{opacity:0,scale:0,yPercent:15,xPercent:100},{scale:2,opacity:1,rotationZ:'180deg',color:'red', duration:5})
-                        .to({},{duration:5})
-                        .to(ei.current,{yPercent:-100,xPercent:0,duration:5})
-    
-                    .fromTo(item7.current,{yPercent:100,rotationZ:'-90deg', opacity:0, color:'white', scale:1},{yPercent:200,xPercent:20,scale:2,opacity:1,textShadow:'2px 2px 4px white',duration:5},)
-                        .fromTo(item7.current,{rotationZ:'-90deg', scale:2, duration:5},{xPercent:0,rotationZ:'0deg', scale:5, duration:5})
-                        .to([gear1.current,gear2.current], {opacity:1, duration:5},'<')
-                        .to(item7.current,{textShadow:'5px 5px 5px red', duration:5},)
-                        .to({},{duration:3})
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: containerThe.current,
+                start: "top top",
+                end: "+=4000 top",
+                scrub: true,
+                pin: true,
+                // markers: true
+            }
         });
 
-        return () => ctx.revert();
-        });
 
-            ///////////////////////////
-            ////////MOBILE/////////////
-            ///////////////////////////
-        mm.add("(max-width: 767px)", () => {
-            const ctx = gsap.context(() => {
-
-                const tl = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: containerThe.current,
-                        start: "top top",
-                        end: "+=4000 top",
-                        scrub: true,
-                        pin: true,
-                        // markers: true
-                    }
-                });
-
-                tl
+        tl
                 .fromTo(title.current,{opacity:0,scale:1,yPercent:-200, duration:5}, {yPercent:0,opacity:1,scale:1, duration:5})
 
 
@@ -150,15 +80,11 @@ export default function The(){
                     .to([gear1.current,gear2.current], {opacity:1, duration:5},'<')
                     .to(item7.current,{textShadow:'5px 5px 5px red', duration:5},)
                     .to({},{duration:5})
-            });
 
-            return () => ctx.revert();
-        });
+    }, containerThe); 
 
-        return () => mm.revert(); // очищает группы медиазапросов
-    }, []);
-
-
+    return () => ctx.revert(); 
+}, []);
     return(
         <>
             <div ref={containerThe} className='containerThe'>
