@@ -41,14 +41,19 @@ export default function Desktop() {
         ease: "power1.inOut",
         paused: true,
       });
+      const box4 = gsap.timeline({
+        repeat: -1,
+        ease: "power1.inOut",
+        paused: true,
+      });
+
 
       logoTl
         .fromTo(
           contLogo.current,
           { opacity: 0, y: "45vh", x: "45vw", scale: 4 },
-          { opacity: 1, duration: 1 }
+          { opacity: 1, }
         )
-        .to({}, { duration: 2 })
         .to(contLogo.current, {
           y: 0,
           scale: 0.6,
@@ -99,12 +104,10 @@ export default function Desktop() {
             x: 0,
             opacity: 1,
             gap: 0,
-            duration: 1.3,
           }
         )
         .to(contQuestRef.current, {
           scale: 1.1,
-          duration: 0.6,
         })
 
         .fromTo(
@@ -117,7 +120,6 @@ export default function Desktop() {
           height: "70vh",
           scale: 1.1,
           zIndex: 100,
-          duration: 0.8,
         })
 
         .to(
@@ -147,9 +149,21 @@ export default function Desktop() {
             y: "30vh",
             scale: 3,
             textShadow: "3px 3px 3px red",
-            duration: 1.2,
           }
-        );
+        )
+
+        box4
+        .to({},{duration:2})
+
+        .to(box4Ref.current,{y:-100})
+        .to(box4Ref.current,{y:-80})
+        .to(box4Ref.current,{y:-100})
+        .to(box4Ref.current,{y:-80})
+
+        .to({},{duration:2})
+
+
+
 
       ScrollTrigger.create({
         trigger: containerRef.current,
@@ -164,6 +178,11 @@ export default function Desktop() {
       logoTl.eventCallback("onComplete", () => {
         mainTl.play();
       });
+
+      mainTl.eventCallback("onComplete", () => {
+        box4.play();
+      });
+
     }, containerRef); 
 
     return () => ctx.revert(); 

@@ -5,6 +5,9 @@ html{
     width: 100%;
     height: 100%;
     overflow: hidden;
+    position: sticky;
+    top: 0;
+    margin-top: 100vh;
 }
 .contBox1{
     width: 100%;
@@ -15,20 +18,26 @@ html{
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 .video-container{
     width: 100%;
     height: 100%;
 }
 .wrapper-video{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-   object-fit: cover; 
-  border-radius: 50px;
-  opacity: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 50px;
+    opacity: 1;
+    overflow: hidden;
 }
-
+.blurSlide{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
 .theStartTitle{
     width: 100%;
     height: max-content;
@@ -46,40 +55,39 @@ html{
     opacity: 0;
     font-size: 22px;
 }
-
 @media screen and (max-width:767px){
     html{
     margin: 0;
 }
-
 .containerStart{
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(46, 2, 2);
 }
 .contBox1{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     border: 2px solid red;
     border-radius:50px ;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-
+    position: absolute;
 }
 .video-container{
     width: 100%;
     height: 100%;
 }
 .wrapper-video{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-   object-fit: cover; 
-  border-radius: 50px;
-  opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 50px;
+    opacity: 1;
 }
-
 .theStartTitle{
     width: 100%;
     height: max-content;
@@ -91,11 +99,10 @@ html{
     padding-right: 2vw;
     align-items: center;
 }
-
 .okak{
     position: absolute;
     color: white;
-    opacity: 0;
+    opacity: 1;
 }
 }
 

@@ -4,6 +4,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: sticky;
+    top: 0;
+    margin-top: 100vh;
+    background-color: black;
 }
 .containerBackImg{
     width: 100%;
@@ -162,6 +166,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(46, 2, 2);
 }
 .containerBackImg{
     width: 100%;

@@ -69,7 +69,6 @@ export default function Mobile() {
             .fromTo([box7Ref.current,box6Ref.current,box5Ref.current,box4Ref.current,box3Ref.current,box2Ref.current,box1Ref.current],{ opacity: 0, scale: 0.5 },{ opacity: 1, scale: 1, stagger: 0.1 })
                 .to([box7Ref.current,,box6Ref.current,box5Ref.current,box4Ref.current,box3Ref.current,box2Ref.current,box1Ref.current],{ y: '100%',opacity: 0, scale: 0, stagger: 0.1, },)
 
-            // .to(box4Ref.current, {scale: 0, opacity:0, })
                 .to([box7Ref.current,box1Ref.current,box6Ref.current,box2Ref.current,box5Ref.current,box3Ref.current],{ display: "none" })
             .to([box4h1Ref.current, box4p1Ref.current, box4p2Ref.current],{display:'flex'},'<')
                 .to(box4Ref.current, {y:0 ,scale: 1,opacity: 1,borderRadius: "50px",height: "100%"},)
