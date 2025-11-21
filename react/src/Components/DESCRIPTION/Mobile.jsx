@@ -32,36 +32,36 @@ export default function Mobile(){
         });
 
         contSlide
-        .fromTo(boxRef.current,{ xPercent:-100, opacity: 0, scale: 1 },{ xPercent: 0, opacity: 1, duration: 10 })
-          .to(boxRef.current, { scale: 0.8, duration: 10 })
+        .fromTo(boxRef.current,{ xPercent:-100, opacity: 0, scale: 1 },{ xPercent: 0, opacity: 1, duration: 5 })
+          .to(boxRef.current, { scale: 0.8, duration: 5 })
 
-        .fromTo(slide1Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 6})
-            .to({},{duration:10})
-        .fromTo(slide1Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
+        .fromTo(slide1Ref.current,{opacity:0, scale:0.5, duration: 5},{opacity:1, scale:1, duration: 5})
+            .to({},{duration:5})
+        .to(slide1Ref.current,{opacity:0, scale:0.5, duration: 5})
 
 
-        .fromTo(slide2Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 6})
-            .to({},{duration:10})
-        .fromTo(slide2Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
+        .fromTo(slide2Ref.current,{opacity:0, scale:0.5, duration: 5},{opacity:1, scale:1, duration: 5})
+            .to({},{duration:5})
+        .to(slide2Ref.current,{opacity:0, scale:0.5, duration: 5})
 
-        .fromTo(slide3Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 10})
-        .to({},{duration:10})
-        .fromTo(slide3Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
+        .fromTo(slide3Ref.current,{opacity:0, scale:0.5, duration: 5},{opacity:1, scale:1, duration: 5})
+        .to({},{duration:5})
+        .to(slide3Ref.current,{opacity:0, scale:0.5, duration: 5})
 
-        .fromTo(slide4Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 6})
-            .to({},{duration:10})
-        .fromTo(slide4Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
+        .fromTo(slide4Ref.current,{opacity:0, scale:0.5, duration: 5},{opacity:1, scale:1, duration: 5})
+            .to({},{duration:5})
+        .to(slide4Ref.current,{opacity:0, scale:0.5, duration: 5})
 
-        .fromTo(slide5Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 6})
-            .to({},{duration:10})
-        .fromTo(slide5Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
+        .fromTo(slide5Ref.current,{opacity:0, scale:0.5, duration: 5},{opacity:1, scale:1, duration: 5})
+            .to({},{duration:5})
+        .to(slide5Ref.current,{opacity:0, scale:0.5, duration: 5})
 
-        .fromTo(slide6Ref.current,{opacity:0, scale:0.5, duration: 6},{opacity:1, scale:1, duration: 6})
-            .to({},{duration:10})
-        .fromTo(slide6Ref.current,{duration: 6},{opacity:0, scale:0.5, duration: 6})
+        .fromTo(slide6Ref.current,{opacity:0, scale:0.5, duration: 5},{opacity:1, scale:1, duration: 5})
+            .to({},{duration:5})
+        .to(slide6Ref.current,{opacity:0, scale:0.5, duration: 5})
 
-          .to(boxRef.current,{ scale: 1, duration: 10 },'<')
-          .to(boxRef.current,{ xPercent: -100, opacity: 0, duration: 10 });
+          .to(boxRef.current,{ scale: 1, duration: 5 },'<')
+          .to(boxRef.current,{ xPercent: -100, opacity: 0, duration: 5 });
 
     }, containerRef); 
 
