@@ -27,17 +27,19 @@ export default function Desktop() {
 
     const ctx = gsap.context(() => {
 
+                const questSlides2 = gsap.timeline({
+            scrollTrigger: {
+              trigger: containerRef.current,
+              start: "top top",
+              end: "+=5000 center",
+              scrub: true,
+              pin: true,
+              // markers: true,
+            },
+          });
 
-      const questSlides2 = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top top",
-          end: "+=3000 center",
-          scrub: true,
-          pin: true,
-          // markers: true,
-        },
-      });
+
+      // const questSlides2 = gsap.timeline({paused: true});
 
     questSlides2
     .fromTo(boxRef.current,{ opacity: 0, width: "10vw", height: "10vh", },
@@ -45,12 +47,11 @@ export default function Desktop() {
       .to(boxRef.current, { height: "90vh", duration: 2 })
       .to(boxRef.current, { scale: 0.9, duration: 2 })
       .to(contMap.current,{width:0, duration: 5 })
-      .to(contMap.current,{position:'relative', width:'50%', duration: 2, filter:'blur(5px)'})
+      .to(contMap.current,{position:'relative', width:'50%', duration: 2, })
 
     .fromTo(opa.current,{opacity:0,width:0, color:'white'},{opacity:1,width:'50%',duration: 2,color:'grey', },)
 
       .to(boxRef.current, { scale: 1, duration: 2 })
-      .to(contMap.current,{filter:'blur(0px)',duration:5},'<')
 
 
       .to({},{duration:3})

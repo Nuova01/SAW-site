@@ -6,41 +6,68 @@
     width: 100%;
     height: max-content;
     display: flex;
+    flex-direction: row;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     color: #222;
-        position: sticky;
+    position: sticky;
     top: 0;
+    background: linear-gradient(90deg,#2c0f12, #6B1E23);
+    font-family: monospace;
 }
 .contSlide1{
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;    
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     overflow-x: hidden;
 }
-.theTitle{
+.boxAnim{
     width: 100%;
+    height: 50%;
     display: flex;
-    justify-content: end;
-    position: absolute;
-    font-size: 50%;
-    top: 0;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3vw;
+    align-items: center;
+}
+.anim1{
+    width: 40%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    flex-direction: row;
+    border-radius: 50px;
+    overflow: hidden;
+    background: linear-gradient(0deg, #6B1E23, #2c0f12);
 }
 .theItem1{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: max-content;
+position: relative;
 }
 .theItem3{
+position: relative;
+}
+.theItem2Img{
+    width: 200px;
+    height: 200px;
+    background-image:url(../../assets/5.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 200px;
+}
+.anim2{
+    width: 40%;
+    height: 80%;
     display: flex;
     justify-content: center;
-    width: 50%;
-    height: max-content;
+    align-items: center;    
+    border-radius: 50px;
+    overflow: hidden;
+    background: linear-gradient(-900deg,#2c0f12, #6B1E23);
 }
 .ynikMeh{
     width: 100%;
@@ -48,21 +75,45 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
     text-align: center;
+}
+.ynika{
+    transform: rotate(-90deg);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.l{
+    transform: rotate(-90deg);
+}
+.nie{
+    transform: rotate(-90deg);
+    position: absolute;
+}
+.anim3{
+    width: 83%;
+    height: 60%;
+    margin-bottom: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    border-radius: 50px;
+    overflow: hidden;
+    background: linear-gradient(0deg,#2c0f12, #6B1E23);
+    font-size: 60px;
+}
+.theTitle{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    top: 0;
+    display: none;
 }
 .theItem5{
     position: absolute;
     opacity: 0;
-}
-.theItem2Img{
-    width: 200px;
-    height: 300px;
-    background-image:url(../../assets/5.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 200px;
 }
 .theItem6{
     display: flex;
@@ -73,40 +124,24 @@
     position: absolute;
 }
 .theItem7{
-    width: 50%;
+    width: 100%;
     height: max-content;
     display: flex;
     justify-content: center;
-    gap: 10%;
+    gap: 0%;
     align-items: center;
     text-align: center;
-    position: absolute;
 }
 .itemMehText{
     position: absolute;
     z-index: 100;
 }
-.ynika{
-transform: rotate(-90deg);
-position: absolute;
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-}
-.l{
-    transform: rotate(-90deg);
-}
-.nie{
-    transform: rotate(-90deg);
-    position: absolute;
-}
 .gear{
     background-image: url(../../assets/шестеренка.svg);
     background-position: center;
     background-size: cover;
-    width: 50px;
-    height: 50px;
+    width: 300px;
+    height: 300px;
     color:aliceblue;
     border-radius: 100px;
     opacity: 0;
@@ -129,43 +164,65 @@ text-align: center;
 @media screen and (max-width: 767px) {
 .containerThe{
     width: 100%;
-    height: max-content;
+    height: 300vh ;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     color: #222;
+    overflow: hidden;
+    background: linear-gradient(90deg,#2c0f12, #6B1E23);
+    font-family: monospace;
+    position: relative;
 }
 .contSlide1{
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow-x: hidden;
+}
+.boxAnim{
+    width: 100%;
+    height: 100%;
+}
+.anim1{
+    width: 90%;
+    height: max-content !important;
     display: flex;
     justify-content: center;
     align-items: center;    
     flex-direction: column;
-    overflow-x: hidden;
-}
-.theTitle{
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    margin-right: 20%;
-    transform: scale(1.1);
-    position: absolute;
-    top: 0;
+    border-radius: 50px;
+    overflow: hidden;
+    background: linear-gradient(110deg, #6B1E23, #2c0f12);
+    box-shadow: none;
 }
 .theItem1{
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    height: max-content;
+    position: absolute;
 }
 .theItem3{
+    position: absolute;
+}
+.theItem2Img{
     display: flex;
     justify-content: center;
-    width: 50%;
-    height: 50%;
-    height: max-content;
+    font-size: 500px;
+    height: 100%;
+    background-image:none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.anim2{
+    width: 90%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    border-radius: 50px;
+    overflow: hidden;
+    background: linear-gradient(20deg,#2c0f12, #6B1E23);
+    box-shadow: none;
 }
 .ynikMeh{
     width: 100%;
@@ -173,80 +230,96 @@ text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
     text-align: center;
 }
-.theItem5{
+.ynika{
+    transform: rotate(-90deg);
     position: absolute;
-    opacity: 0;
-}
-.theItem2Img{
-    width: 200px;
-    height: 300px;
-    background-image:url(../../assets/5.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 200px;
-}
-.theItem6{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    border-radius: 9px;
-    position: absolute;
-}
-.theItem7{
-    width: 100%;
-    height: max-content;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     text-align: center;
-    position: absolute;
-}
-.itemMehText{
-    position: absolute;
-    z-index: 100;
-}
-.ynika{
-transform: rotate(-90deg);
-position: absolute;
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
 }
 .l{
     transform: rotate(-90deg);
 }
 .nie{
     transform: rotate(-90deg);
-position: absolute;
+    position: absolute;
+}
+.anim3{
+    width: 90%;
+    height: 30%;
+    margin-bottom: 5vh;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 50px;
+    overflow: hidden;
+    background: linear-gradient(0deg,#6B1E23,#2c0f12);
+    box-shadow: none;
+}
+.theTitle{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    top: 0;
+    display: none;
+}
+.theItem7{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0%;
+    align-items: center;
+    opacity: 0;
+}
+.itemMehText{
+    transform: rotate(60deg);
+    font-size: 50px;
+    z-index: 100;
+    position: relative;
+}
+.boxGear{
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    opacity: 1;
 }
 .gear{
     background-image: url(../../assets/шестеренка.svg);
     background-position: center;
     background-size: cover;
-    width: 50px;
-    height: 50px;
-    color:aliceblue;
+    width: 150px;
+    height: 150px;
     border-radius: 100px;
+    opacity: 1;
+    position: absolute;
 }
 .gear1{
     transform: rotate(90deg);
     animation:go 14s linear infinite ;
+    opacity: 0;
+    margin-bottom:100px;
+
 }
 @keyframes go {
-    from { transform: rotate(90deg); }
-    to   { transform: rotate(450deg); }
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
 }
 .gear2{
     animation:goi 14s linear infinite ;
+    margin-left:100px;
+    margin-top:100px;
+    opacity: 0;
 }
 @keyframes goi {
     from { transform: rotate(0deg); }
     to   { transform: rotate(-360deg); }
 }
-}
+
+} 

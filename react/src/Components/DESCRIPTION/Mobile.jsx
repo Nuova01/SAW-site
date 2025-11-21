@@ -6,7 +6,7 @@ import React from 'react';
 import "./style.css";
 
 
-export default function Desktop(){
+export default function Mobile(){
     const containerRef = useRef(null);
     const boxRef = useRef(null);
     const slide1Ref = useRef(null);
@@ -24,7 +24,7 @@ export default function Desktop(){
           scrollTrigger: {
             trigger: containerRef.current,
             start: "top top",
-            end: "+=3000 top",
+            // end: "+=3000 top",
             scrub: true,
             pin: true,
             // markers: true

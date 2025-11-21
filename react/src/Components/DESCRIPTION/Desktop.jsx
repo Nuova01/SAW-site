@@ -20,41 +20,42 @@ export default function Desktop(){
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
 
-      const contSlide = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top top",
-          end: "+=3000 top",
-          scrub: true,
-          pin: true,
-          // markers: true
-        }
-      });
+      const contSlide = gsap.timeline({ paused: true });
 
       contSlide
-      .fromTo(boxRef.current,{ x: -800, opacity: 0, scale: 1 },{ x: 0, opacity: 1, duration: 10 })
-        .to(boxRef.current, { scale: 0.8, duration: 10 })
+      .fromTo(boxRef.current,{ x: -800, opacity: 0, scale: 1 },{ x: 0, opacity: 1, duration: 1 })
+        .to(boxRef.current, { scale: 0.8, duration: 1 })
         
-      .fromTo(slide1Ref.current,{opacity:0, scale:0.5, duration: 10},{opacity:1, scale:1, xPercent:-9,yPercent:-30, duration: 10})
-      .fromTo(slide2Ref.current,{opacity:0, scale:0.5, duration: 10},{opacity:1, scale:1, xPercent:130,yPercent:250, duration: 10})
-      .fromTo(slide3Ref.current,{opacity:0, scale:0.5, duration: 10},{opacity:1, scale:1, xPercent:-3,yPercent:60, duration: 10})
-      .fromTo(slide4Ref.current,{opacity:0, scale:0.5, duration: 10},{opacity:1, scale:1, xPercent:160,yPercent:-200, duration: 10})
-      .fromTo(slide5Ref.current,{opacity:0, scale:0.5, duration: 10},{opacity:1, scale:1, xPercent:160,yPercent:-250, duration: 10})
-      .fromTo(slide6Ref.current,{opacity:0, scale:0.5, duration: 10},{opacity:1, scale:1, xPercent:30,yPercent:-360, duration: 10})
+      .fromTo(slide1Ref.current,{opacity:0, scale:0.5,xPercent:160,yPercent:200},{opacity:1, scale:1,xPercent:0,yPercent:0})
+      .fromTo(slide2Ref.current,{opacity:0, scale:0.5,xPercent:-160,yPercent:-200 },{opacity:1, scale:1,xPercent:0,yPercent:0 },'<')
+      .fromTo(slide3Ref.current,{opacity:0, scale:0.5,xPercent:160,yPercent:200 },{opacity:1, scale:1,xPercent:0,yPercent:0 })
+      .fromTo(slide4Ref.current,{opacity:0, scale:0.5,xPercent:-160,yPercent:-200 },{opacity:1, scale:1,xPercent:0,yPercent:0 },'<')
+      .fromTo(slide5Ref.current,{opacity:0, scale:0.5,xPercent:160,yPercent:200 },{opacity:1, scale:1,xPercent:0,yPercent:0 })
+      .fromTo(slide6Ref.current,{opacity:0, scale:0.5,xPercent:-160,yPercent:-200 },{opacity:1, scale:1,xPercent:0,yPercent:0 },'<')
 
-      .fromTo(containerRef.current,{},{duration:10})
-      
-        .to(slide1Ref.current,{scale:0.5,opacity:0, duration: 10},)
-        .to(slide2Ref.current,{scale:0.5,opacity:0, duration: 10},'<')
-        .to(slide3Ref.current,{scale:0.5,opacity:0, duration: 10},'<')
-        .to(slide4Ref.current,{scale:0.5,opacity:0, duration: 10},'<')
-        .to(slide5Ref.current,{scale:0.5,opacity:0, duration: 10},'<')
-        .to(slide6Ref.current,{scale:0.5,opacity:0, duration: 10},'<')
+        .to(boxRef.current,{gap:'7%'})
+        .to(slide1Ref.current,{scale:1.09, duration: 1},'<')
+        .to(slide2Ref.current,{scale:1.09,duration: 1},'<')
+        .to(slide3Ref.current,{scale:1.09, duration: 1},'<')
+        .to(slide4Ref.current,{scale:1.09,duration: 1},'<')
+        .to(slide5Ref.current,{scale:1.09, duration: 1},'<')
+        .to(slide6Ref.current,{scale:1.09, duration: 1},'<')
 
-        .to(boxRef.current,{ scale: 1, duration: 10 },'<')
-        .to(boxRef.current,{ x: -800, opacity: 0, duration: 10 });
+        .to(boxRef.current,{ scale: 0.9, duration: 1 },'<')
+
+
+        ScrollTrigger.create({
+          trigger: containerRef.current,
+          start: "top center",
+          once: true,
+          onEnter: () => {
+            contSlide.play();
+        },
+    });
 
     }, containerRef); 
+
+
 
     return () => ctx.revert(); 
   }, []);
