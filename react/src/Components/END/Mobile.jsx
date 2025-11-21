@@ -37,12 +37,12 @@ export default function Mobile() {
         .to(boxRef.current, { height: "90vh", duration: 2 })
         .to(boxRef.current, { scale: 0.9, duration: 2 })
         // .to(contMap.current,{height:0, width:0, duration: 5 })
-        .to(contMap.current,{position:'relative', height:'50%', duration: 2, filter:'blur(5px)'})
+        .to(contMap.current,{position:'relative', height:'50%', duration: 2,})
 
     .fromTo(opa.current,{opacity:0,height:0, color:'white'},{opacity:1,height:'50%',duration: 2,color:'grey', },)
 
         .to(boxRef.current, { scale: 1, duration: 2 })
-        .to(contMap.current,{filter:'blur(0px)',duration:5},'<')
+        .to(contMap.current,{duration:5},'<')
 
 
         .to({},{duration:3})
