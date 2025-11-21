@@ -24,7 +24,7 @@ export default function Mobile(){
           scrollTrigger: {
             trigger: containerRef.current,
             start: "top top",
-            // end: "+=3000 top",
+            end: "+=3000 top",
             scrub: true,
             pin: true,
             // markers: true
