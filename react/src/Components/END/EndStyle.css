@@ -17,22 +17,22 @@
     align-items: center;
 }
 .slideshow {
-  position: relative;
-  width: 100%;
-  height: 100vh; 
-  overflow: hidden;
-  opacity: 0;
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+    opacity: 0;
 }
 .slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  animation: fade 30s infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: fade 30s infinite;
 }
 
 .s1 { background-image: url("../../assets/Маньяк.png"); animation-delay: 0s; }
@@ -71,7 +71,7 @@
     justify-content: center;
     align-items:center;
     text-align: center;
-    background-color: black;
+    background-color: #00000099;
     color: red;
     font-size: 120%;
     width: 100%;
@@ -93,11 +93,11 @@
     text-decoration: none; 
 }
 .boxBotoom:visited {
-  color: inherit;
-  text-decoration: none;      
+    color: inherit;
+    text-decoration: none;      
 }
 .boxBottom:active {
-  text-decoration: none;
+    text-decoration: none;
 }
 @keyframes buttonHov {
     to{
@@ -154,7 +154,7 @@
     font-size: 100%;
 }
 .contBox4{
-    border: 5px solid red;
+    box-shadow: 0px 0px 30px aqua;
     background-color: rgb(36, 1, 1);
     border-radius:50px ;
 }
@@ -177,23 +177,23 @@
 }
 
 .slideshow {
-  position: relative;
-  width: 100%;
-  height: 100vh; 
-  overflow: hidden;
-  opacity: 0;
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+    opacity: 0;
 }
 
 .slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  animation: fade 30s infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: fade 30s infinite;
 }
 
 .s1 { background-image: url("../../assets/Маньяк.png"); animation-delay: 0s; }
@@ -235,7 +235,7 @@
     justify-content: center;
     align-items:center;
     text-align: center;
-    background-color: black;
+    background-color: #00000099;
     color: red;
     font-size: 100%;
     width: 100%;
@@ -258,11 +258,11 @@
      text-decoration: none; 
 }
 .boxBotoom:visited {
-  color: inherit;
-  text-decoration: none;      
+    color: inherit;
+    text-decoration: none;      
 }
 .boxBottom:active {
-  text-decoration: none;
+    text-decoration: none;
 }
 @keyframes buttonHov {
     to{
@@ -276,10 +276,13 @@
     25%{
         transform: rotate(5deg);
         box-shadow: 2px -2px 5px white;
+        color: white;
     }
     75%{
         transform: rotate(-5deg);
         box-shadow: -2px 2px 5px white;
+        color: white;
+
     }
     to{
         transform: rotate(0deg);
@@ -316,7 +319,6 @@
     font-size: 50%;
 }
 .contBox4{
-    border: 5px solid red;
     background-color: rgb(36, 1, 1);
     border-radius:50px ;
     display: flex;

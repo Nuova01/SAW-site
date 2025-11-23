@@ -3,7 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useLayoutEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
 import React from 'react';
-import './style.css'
+import './FeatStyle.css'
 
 export default function Mobile(){ 
     const containerThe = useRef(null);
@@ -41,9 +41,9 @@ useLayoutEffect(() => {
                 .fromTo(item3.current,{opacity:0, scale:1,},{opacity:1,scale:1.8,zIndex:100, textShadow:'2px 2px 4px black', })
                     .to(item3.current,{y:200, });
         t2
-                .fromTo(ynika.current,{opacity:0,scale:1.3,y:80,x:22},{opacity:1,color:'#222'})
-                .fromTo(el.current,{opacity:0,scale:1.3,y:15,x:22},{opacity:1,color:'black', },'<')
-                .fromTo(nie.current,{opacity:0,scale:1.3,y:-40,x:22},{opacity:1,color:'#222', },'<')
+                .fromTo(ynika.current,{opacity:0,scale:1.3,y:80,x:22},{opacity:1,color:'#222',textShadow:'2px 2px 4px black'})
+                .fromTo(el.current,{opacity:0,scale:1.3,y:15,x:22},{opacity:1,color:'black', textShadow:'2px 2px 4px black'},'<')
+                .fromTo(nie.current,{opacity:0,scale:1.3,y:-40,x:22},{opacity:1,color:'#222',textShadow:'2px 2px 4px black' },'<')
                 .fromTo(el.current,{color:'black',},{color:'red', })
                     .to(el.current,{rotationZ:'0deg', })
 

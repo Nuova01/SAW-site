@@ -1,5 +1,5 @@
-import Mobile from './Mobile';
-import Desktop from './Desktop';
+import Mobile from './LogoMobile';
+import Desktop from './LogoDesktop';
 // import Tablet from './Tablet';
 import { useDevice } from '../HOOKS/useDevice';
 

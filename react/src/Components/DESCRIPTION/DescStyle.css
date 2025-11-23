@@ -7,8 +7,7 @@
     margin-bottom: 100vh;
 }
 .contBox2{
-    border: 3px solid aqua;
-    box-shadow: 0px 0px 30px rgb(127, 25, 210);
+
     border-radius:50px ;
     width: 90%;
     height: 100vh;
@@ -33,8 +32,8 @@
     align-items: center;
     text-align: center;
     border: 1px solid rgb(72, 72, 72);
-    color: white;
-    text-shadow: 3px 3px 3px black;
+    color: #222;
+    text-shadow: 0px 0px 5px black;
     opacity: 1;
 }
 .slide1,
@@ -77,10 +76,10 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    border: 1px solid rgb(72, 72, 72);
     color: grey;
     font-size: 15px;
     position: absolute;
+    border: none;
 }
 .slide1,
 .slide2,

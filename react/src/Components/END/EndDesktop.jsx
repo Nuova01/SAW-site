@@ -3,10 +3,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useLayoutEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
 import React from 'react';
-import "./style.css";
+import "./EndStyle.css";
 
 
-export default function Mobile() {
+export default function Desktop() {
   const containerRef = useRef(null);
   const containerBackImg = useRef(null);
   const boxRef = useRef(null);
@@ -19,46 +19,55 @@ export default function Mobile() {
   const slideShow = useRef(null);
   const boxBottom = useRef(null);
 
+
+
+
+
   useLayoutEffect(() => {
+
     const ctx = gsap.context(() => {
-        const questSlides2 = gsap.timeline({
-        scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top top",
-            end: "+=3000 center",
-            scrub: true,
-            pin: true,
-            // markers: true,
-        },
-        });
+
+                const questSlides2 = gsap.timeline({
+            scrollTrigger: {
+              trigger: containerRef.current,
+              start: "top top",
+              end: "+=5000 center",
+              scrub: true,
+              pin: true,
+              // markers: true,
+            },
+          });
+
+
+      // const questSlides2 = gsap.timeline({paused: true});
 
     questSlides2
-    .fromTo(boxRef.current,{ opacity: 0, width: "10vw", height: "10vh", },{ opacity: 1, width: "90vw", duration: 2 })
-        .to(boxRef.current, { height: "90vh", duration: 2 })
-        .to(boxRef.current, { scale: 0.9, duration: 2 })
-        // .to(contMap.current,{height:0, width:0, duration: 5 })
-        .to(contMap.current,{position:'relative', height:'50%', duration: 2,})
+    .fromTo(boxRef.current,{ opacity: 0, width: "10vw", height: "10vh", },
+                          { opacity: 1, width: "90vw", duration: 2 })
+      .to(boxRef.current, { height: "90vh", duration: 2 })
+      .to(boxRef.current, { scale: 0.9, duration: 2 })
+      .to(contMap.current,{width:0, duration: 5 })
+      .to(contMap.current,{position:'relative', width:'50%', duration: 2, })
 
-    .fromTo(opa.current,{opacity:0,height:0, color:'white'},{opacity:1,height:'50%',duration: 2,color:'grey', },)
+    .fromTo(opa.current,{opacity:0,width:0, color:'white'},{opacity:1,width:'50%',duration: 2,color:'grey', },)
 
-        .to(boxRef.current, { scale: 1, duration: 2 })
-        .to(contMap.current,{duration:5},'<')
+      .to(boxRef.current, { scale: 1, duration: 2 })
 
 
-        .to({},{duration:3})
+      .to({},{duration:3})
 
     .fromTo(boxRef.current,{ },{ height: "10vh" ,  duration: 2 })
-        .to(opa.current,{opacity:0,duration:2},'<')
-        .to(contMap.current,{opacity:0,duration:2},'<')
-        .to([contMap.current,opa.current],{display:'none'})
+      .to(opa.current,{opacity:0,duration:3},'<')
+      .to(contMap.current,{opacity:0,duration:3},'<')
+      .to([contMap.current,opa.current],{display:'none'})
 
-        .to(boxRef.current, { width: "60vw",duration: 2, position:'absolute',})
-        .to(boxBottom.current, { duration: 2, display:'flex', opacity:1})
+      .to(boxRef.current, { width: "40vh",duration: 2, position:'absolute',})
+      .to(boxBottom.current, { duration: 2, display:'flex', opacity:1})
 
-        
-        .to(containerBackImg.current,{className:'containerBack', opacity:1,},'<')
-        .to(slideShow.current,{opacity:1, duration:3},)
-        .fromTo(boxRef.current,{ },{ height: "10vh" ,  duration: 2 });
+      
+      .to(containerBackImg.current,{className:'containerBack', opacity:1,},'<')
+      .to(slideShow.current,{opacity:1, duration:3},)
+      .fromTo(boxRef.current,{ },{ height: "10vh" ,  duration: 2 });
 
 
     }, containerRef); 
