@@ -3,7 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useLayoutEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
 import React from 'react';
-import "./style.css";
+import "./DescStyle.css";
 
 
 export default function Desktop(){
@@ -34,14 +34,14 @@ export default function Desktop(){
       .fromTo(slide6Ref.current,{opacity:0, scale:0.5,xPercent:-160,yPercent:-200 },{opacity:1, scale:1,xPercent:0,yPercent:0 },'<')
 
         .to(boxRef.current,{gap:'7%'})
-        .to(slide1Ref.current,{scale:1.09, duration: 1},'<')
-        .to(slide2Ref.current,{scale:1.09,duration: 1},'<')
-        .to(slide3Ref.current,{scale:1.09, duration: 1},'<')
-        .to(slide4Ref.current,{scale:1.09,duration: 1},'<')
-        .to(slide5Ref.current,{scale:1.09, duration: 1},'<')
-        .to(slide6Ref.current,{scale:1.09, duration: 1},'<')
+        .to(slide1Ref.current,{scale:1.09, duration: 1, color:'white'},'<')
+        .to(slide2Ref.current,{scale:1.09,duration: 1, color:'white'},'<')
+        .to(slide3Ref.current,{scale:1.09, duration: 1, color:'white'},'<')
+        .to(slide4Ref.current,{scale:1.09,duration: 1, color:'white'},'<')
+        .to(slide5Ref.current,{scale:1.09, duration: 1, color:'white'},'<')
+        .to(slide6Ref.current,{scale:1.09, duration: 1, color:'white'},'<')
 
-        .to(boxRef.current,{ scale: 0.9, duration: 1 },'<')
+        .to(boxRef.current,{ scale: 0.9, duration: 1,  boxShadow:'0px 0px 50px aqua' },'<')
 
 
         ScrollTrigger.create({

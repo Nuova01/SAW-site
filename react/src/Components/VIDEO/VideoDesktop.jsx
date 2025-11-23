@@ -3,7 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useLayoutEffect} from "react";
 gsap.registerPlugin(ScrollTrigger);
 import React from 'react';
-import './style.css'
+import './VideoStyle.css'
 
 export default function Desktop(){
     const containerStart = useRef(null)

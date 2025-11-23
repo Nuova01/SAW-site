@@ -3,7 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useLayoutEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
 import React from 'react';
-import "./style.css";
+import "./DescStyle.css";
 
 
 export default function Mobile(){
@@ -33,7 +33,7 @@ export default function Mobile(){
 
         contSlide
         .fromTo(boxRef.current,{ xPercent:-100, opacity: 0, scale: 1 },{ xPercent: 0, opacity: 1, duration: 5 })
-          .to(boxRef.current, { scale: 0.8, duration: 5 })
+          .to(boxRef.current, { scale: 0.8, duration: 5, boxShadow:'0px 0px 30px aqua'})
 
         .fromTo(slide1Ref.current,{opacity:0, scale:0.5, duration: 5},{opacity:1, scale:1, duration: 5})
             .to({},{duration:5})
@@ -60,7 +60,7 @@ export default function Mobile(){
             .to({},{duration:5})
         .to(slide6Ref.current,{opacity:0, scale:0.5, duration: 5})
 
-          .to(boxRef.current,{ scale: 1, duration: 5 },'<')
+          .to(boxRef.current,{ scale: 1, duration: 5, boxShadow:'0px 0px 0px ' },'<')
           .to(boxRef.current,{ xPercent: -100, opacity: 0, duration: 5 });
 
     }, containerRef); 
